@@ -1,0 +1,810 @@
+[
+  {
+    "group": "temperature",
+    "base_url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr",
+    "requests": [
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/.zmetadata",
+        "path": "arco_raw/temperature/.zmetadata",
+        "bytes": 7181,
+        "sha256": "d2cc97c1097afee0c4f09c09e1d940406b08a74c76b7ccaa8cb3aef3c06c2dd3"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/latitude/0",
+        "path": "arco_raw/temperature/latitude/0",
+        "bytes": 3048,
+        "sha256": "9c933a5c55488051408490b513257e39a2c1ce45fbdb220f6f696d78f4953aa1"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/longitude/0",
+        "path": "arco_raw/temperature/longitude/0",
+        "bytes": 4144,
+        "sha256": "52dff25e168f747afb378735f7a5e000d3fcdc1f4daf55d4c4b2040c0aa3612c"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/time/0",
+        "path": "arco_raw/temperature/time/0",
+        "bytes": 2322,
+        "sha256": "a29dc83e1593c54a29efa0390a97e71455539b1be8f1b2f359af1573eed8599a"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/time/1",
+        "path": "arco_raw/temperature/time/1",
+        "bytes": 2331,
+        "sha256": "24ce1361307ac640e934f8956d63295f3ce44259576fc64cdd8206d9be1a2c74"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/time/2",
+        "path": "arco_raw/temperature/time/2",
+        "bytes": 2331,
+        "sha256": "9ff47b6a927dc8f9f65432ae7261428e05fb0d632b3ba54698e5cade9a87b171"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/time/3",
+        "path": "arco_raw/temperature/time/3",
+        "bytes": 2327,
+        "sha256": "48e958e087ac6a3ab40d4f5c86c7389c849c0006935cc5dd0c2470e042cbc9d2"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/time/4",
+        "path": "arco_raw/temperature/time/4",
+        "bytes": 2346,
+        "sha256": "ff94a81bd3a5f796378c019c18ef5ce028d68bfede7c247e29f9bebad70a0505"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/time/5",
+        "path": "arco_raw/temperature/time/5",
+        "bytes": 2331,
+        "sha256": "66c67e135580a7cd71c58b5886bcc129d6eaa0ae8cf59f99095ad9ab34b4a481"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/time/6",
+        "path": "arco_raw/temperature/time/6",
+        "bytes": 2327,
+        "sha256": "94557cb1c9cf534b7d21bd5f3b46629cbaaa26eed3e571bedfcc1a5802c75949"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/time/7",
+        "path": "arco_raw/temperature/time/7",
+        "bytes": 2326,
+        "sha256": "788e1ed9e3664925c84ecd2cfe92663a4ae0f0857e10ac42aa3013ec8bd3d2b9"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/time/8",
+        "path": "arco_raw/temperature/time/8",
+        "bytes": 2322,
+        "sha256": "de0405b824b9a0481ed8d41c30ebb38ad3f59035a2188344d1e74db5e501c883"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/time/9",
+        "path": "arco_raw/temperature/time/9",
+        "bytes": 2331,
+        "sha256": "7aa2d8bfa4996f9c7d9ef211b13bb4118b06f0fe531491dd71cbe8cf8ec4d752"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/time/10",
+        "path": "arco_raw/temperature/time/10",
+        "bytes": 2331,
+        "sha256": "9d455008a885e8b9ed31e0ca3f400d6ec720a25686e2afaa39bb6306b3f7593d"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/time/11",
+        "path": "arco_raw/temperature/time/11",
+        "bytes": 2322,
+        "sha256": "2a0fa36222f2e89fcfa455e75ce6f0fd8545cd62119ed1938e601d87bad784f1"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/time/12",
+        "path": "arco_raw/temperature/time/12",
+        "bytes": 2331,
+        "sha256": "4005fd86ee6570566d31ec1cb575b426f8863ad51a446ed2f394a1cacef882b2"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/time/13",
+        "path": "arco_raw/temperature/time/13",
+        "bytes": 2331,
+        "sha256": "8d68a1e481872541c5b87a7e8889b0e884d79d1a5d3bedc413202cbb2c3eedc3"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/time/14",
+        "path": "arco_raw/temperature/time/14",
+        "bytes": 2325,
+        "sha256": "6d357c7247440a6c6fff662d166f38a682b57e293fed064ee48d4f2bb5571c6c"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/time/15",
+        "path": "arco_raw/temperature/time/15",
+        "bytes": 2327,
+        "sha256": "b8c6c49c02a00b061763fa7e8346a24f84ad97d812bf5f7a95d02d524b489b02"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/time/16",
+        "path": "arco_raw/temperature/time/16",
+        "bytes": 1932,
+        "sha256": "42c20974b7a95f40b2c631cf4abf91e7a20fa6920a7d72725a1fb6d2a74c67e7"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/t2m/13.248.125",
+        "path": "arco_raw/temperature/t2m/13.248.125",
+        "bytes": 2482985,
+        "sha256": "4f4b4193bba7e105ed993675be4c9a64fd004e05fd4d96accd224c9099676e66"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/t2m/14.248.125",
+        "path": "arco_raw/temperature/t2m/14.248.125",
+        "bytes": 2485076,
+        "sha256": "6bbafb36d218ebc4002d2aae011f81a0457df8e911bb5373ff5a769e6b65e274"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/t2m/15.248.125",
+        "path": "arco_raw/temperature/t2m/15.248.125",
+        "bytes": 2485243,
+        "sha256": "79689183f4b6cff5de9dd64d59b1b2147e47333afc18cc451b68f05f378dd5a4"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/t2m/16.248.125",
+        "path": "arco_raw/temperature/t2m/16.248.125",
+        "bytes": 2483141,
+        "sha256": "988dc355a3a79b5315c8f943de993778001b55f2f8585b5be657ec9cc2e6950c"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/t2m/17.248.125",
+        "path": "arco_raw/temperature/t2m/17.248.125",
+        "bytes": 2482503,
+        "sha256": "b4da0fa02d927ae5be04e37a94795e71f08821a2fdc39406d13fb4a69f3f1c26"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/t2m/18.248.125",
+        "path": "arco_raw/temperature/t2m/18.248.125",
+        "bytes": 2486876,
+        "sha256": "f03dcc60485c9731d477171ded5bef99a47f5a9b9ca2c0a7a6dfb379153a77ef"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/d2m/13.248.125",
+        "path": "arco_raw/temperature/d2m/13.248.125",
+        "bytes": 2428838,
+        "sha256": "e1dc649024237b623b6cc8e746ab131e7b443859d34b624d20ff5bf1d23a6947"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/d2m/14.248.125",
+        "path": "arco_raw/temperature/d2m/14.248.125",
+        "bytes": 2427266,
+        "sha256": "9b9bff14a8ab9e23fda14b58df4a760bdf0e54f3e93b8759030aa8321058672b"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/d2m/15.248.125",
+        "path": "arco_raw/temperature/d2m/15.248.125",
+        "bytes": 2424624,
+        "sha256": "4e9400aaa8141de176cf790ceed01561243b085848159f5018b0253ba634bab8"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/d2m/16.248.125",
+        "path": "arco_raw/temperature/d2m/16.248.125",
+        "bytes": 2420842,
+        "sha256": "fac73eedf5945d436ed7094fe5a1d4ae1d8ce2ffdc98d51efe5ee1b8394dcee6"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/d2m/17.248.125",
+        "path": "arco_raw/temperature/d2m/17.248.125",
+        "bytes": 2411563,
+        "sha256": "dbf47e15b4359c9f5dbe2c592d6a2bd00e89f73a851715edf3ce809ecc8f5a02"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-007/arco/reanalysis_era5_land/sfc-2m-temperature/geoChunked.zarr/d2m/18.248.125",
+        "path": "arco_raw/temperature/d2m/18.248.125",
+        "bytes": 2424961,
+        "sha256": "22cd701afb42d4b3ee57958cd3160f8b7480d0de6076e497a88293cb7aa87b78"
+      }
+    ],
+    "variables": [
+      "t2m",
+      "d2m"
+    ]
+  },
+  {
+    "group": "pressure",
+    "base_url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr",
+    "requests": [
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/.zmetadata",
+        "path": "arco_raw/pressure/.zmetadata",
+        "bytes": 7184,
+        "sha256": "cfb17ee7ecb0f118242b51433452c44a21ab53a370c78a0a8a370347400d49b2"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/latitude/0",
+        "path": "arco_raw/pressure/latitude/0",
+        "bytes": 3048,
+        "sha256": "9c933a5c55488051408490b513257e39a2c1ce45fbdb220f6f696d78f4953aa1"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/longitude/0",
+        "path": "arco_raw/pressure/longitude/0",
+        "bytes": 4144,
+        "sha256": "52dff25e168f747afb378735f7a5e000d3fcdc1f4daf55d4c4b2040c0aa3612c"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/time/0",
+        "path": "arco_raw/pressure/time/0",
+        "bytes": 2327,
+        "sha256": "68f9790ee3f3a21a7f1980f9cb442d0a9b0124d95f8146804a95a19596de91cd"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/time/1",
+        "path": "arco_raw/pressure/time/1",
+        "bytes": 2332,
+        "sha256": "082f3efadc8020a33679b0508d39f53df786037c5e180acb725a028add26b157"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/time/2",
+        "path": "arco_raw/pressure/time/2",
+        "bytes": 2331,
+        "sha256": "70c1e1c2bd899fd7ff8284f30482d0629a73f32a44cbb0aba540b994be33734f"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/time/3",
+        "path": "arco_raw/pressure/time/3",
+        "bytes": 2327,
+        "sha256": "125d1e193c51f0361d00777395d3ea3a9c043c889c12bb8a4fdbfd410760dc83"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/time/4",
+        "path": "arco_raw/pressure/time/4",
+        "bytes": 2361,
+        "sha256": "91e05fa9c0d2c4cc03e2d353448f998657c9973a2d8b81bd189212f169c74361"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/time/5",
+        "path": "arco_raw/pressure/time/5",
+        "bytes": 2332,
+        "sha256": "27f40d876c32ff0f0625371433e19c1aca6294e26111110e15a407219f19bf03"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/time/6",
+        "path": "arco_raw/pressure/time/6",
+        "bytes": 2327,
+        "sha256": "cc05824c780e32555b8dda11972233657511d512b117374405dcfec734fe728a"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/time/7",
+        "path": "arco_raw/pressure/time/7",
+        "bytes": 2331,
+        "sha256": "7cb380aea4e8d4578b1f7a66d5d8f1e6e85409a554de3f85495911dbfa1dbc2d"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/time/8",
+        "path": "arco_raw/pressure/time/8",
+        "bytes": 2327,
+        "sha256": "cfa08cb2abd2e78b6d04ca94f0afb3c68665abc200abfad504f85987279ed842"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/time/9",
+        "path": "arco_raw/pressure/time/9",
+        "bytes": 2332,
+        "sha256": "78d9fae7e28691127bcf531cce5d37d5e9f091a040d744965dcd296cdb8d3490"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/time/10",
+        "path": "arco_raw/pressure/time/10",
+        "bytes": 2332,
+        "sha256": "c1f700911541daf5f16e9d63ba08276946c7644722b511732c42db3d6ef84c6b"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/time/11",
+        "path": "arco_raw/pressure/time/11",
+        "bytes": 2327,
+        "sha256": "2308787e162c39c4ed2727c6c44acf58d01e329e985b2aeae9ef0edffb1c333d"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/time/12",
+        "path": "arco_raw/pressure/time/12",
+        "bytes": 2331,
+        "sha256": "0aecf8caceb5e933dc5d22993966504887dfbf0a782968147542451b6779c9aa"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/time/13",
+        "path": "arco_raw/pressure/time/13",
+        "bytes": 2331,
+        "sha256": "d9b0e42d5b19acced431354d3265a62cbf440d432341300fd0a5895ee20f0231"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/time/14",
+        "path": "arco_raw/pressure/time/14",
+        "bytes": 2327,
+        "sha256": "9527b61850db66394d86cbb278143835ab9b2f7ba0519a3ff3b43bfb31b89e7a"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/time/15",
+        "path": "arco_raw/pressure/time/15",
+        "bytes": 2336,
+        "sha256": "6248aa332729cdac682345365178fae17de483ba50f4f8b56aff2ee4b17b8404"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/time/16",
+        "path": "arco_raw/pressure/time/16",
+        "bytes": 1902,
+        "sha256": "d14ad13acd4a21661194f9c827bea60c05583e01f4b8f0d95f5d32c45c51dd4a"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/sp/13.248.125",
+        "path": "arco_raw/pressure/sp/13.248.125",
+        "bytes": 2158193,
+        "sha256": "21ae10222743957f50a9e57ce71fc104215c6dc34732f209412190311cde5538"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/sp/14.248.125",
+        "path": "arco_raw/pressure/sp/14.248.125",
+        "bytes": 2160197,
+        "sha256": "0f4681c847f468cfa7b67c05031682b8916c5970c0ab081e4d274c7f505705e4"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/sp/15.248.125",
+        "path": "arco_raw/pressure/sp/15.248.125",
+        "bytes": 2159008,
+        "sha256": "2fd16ccee64653e7e0e485f1a9c28b6991068860ce25e3d90ce3d88efad54684"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/sp/16.248.125",
+        "path": "arco_raw/pressure/sp/16.248.125",
+        "bytes": 2161561,
+        "sha256": "a21c29269220d32dd14bb9c847e66fdd0ff57b83b0b28e5d1a9e0b4935ac7256"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/sp/17.248.125",
+        "path": "arco_raw/pressure/sp/17.248.125",
+        "bytes": 2163425,
+        "sha256": "73247f2b513711286c87b2284b3f6f63dd7aae89253437dee9558abdc5384566"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/sp/18.248.125",
+        "path": "arco_raw/pressure/sp/18.248.125",
+        "bytes": 2165461,
+        "sha256": "5d98dba4f86cb92911592be63f9071f741380680d858e6b817fe9d686d2599ed"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/tp/13.248.125",
+        "path": "arco_raw/pressure/tp/13.248.125",
+        "bytes": 2833492,
+        "sha256": "dce00828eb8a97597a51e2bfa76990f8aea0523b13535ed71427f65dfb5c2102"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/tp/14.248.125",
+        "path": "arco_raw/pressure/tp/14.248.125",
+        "bytes": 2819544,
+        "sha256": "ab46aae6bbc44cca11102c45bdc8232c5327421ece71ecd1f8fbb2264252d569"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/tp/15.248.125",
+        "path": "arco_raw/pressure/tp/15.248.125",
+        "bytes": 2812270,
+        "sha256": "2e43b76cf6591600870abd8782f51e96b1832e35ffdb9057b7da46e2952b82d1"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/tp/16.248.125",
+        "path": "arco_raw/pressure/tp/16.248.125",
+        "bytes": 2828994,
+        "sha256": "0c952abe581e90b5efb12bd2615c15899cde62f233cc93f414acd79f0028d191"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/tp/17.248.125",
+        "path": "arco_raw/pressure/tp/17.248.125",
+        "bytes": 2771791,
+        "sha256": "5795d027b57f95e508e8c3934b47fe97a0c017cb70a9123fc816d348bb516f56"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-009/arco/reanalysis_era5_land/sfc-pressure-precipitation/geoChunked.zarr/tp/18.248.125",
+        "path": "arco_raw/pressure/tp/18.248.125",
+        "bytes": 2775137,
+        "sha256": "46bf9684a3b5c484b4a4affc36ed9a71642fab89aaab6387a2f5c8d99c1e0825"
+      }
+    ],
+    "variables": [
+      "sp",
+      "tp"
+    ]
+  },
+  {
+    "group": "wind",
+    "base_url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr",
+    "requests": [
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/.zmetadata",
+        "path": "arco_raw/wind/.zmetadata",
+        "bytes": 7203,
+        "sha256": "c55e260cb419d8ecd0828dbf64786d67030fea50133039223f7cad72574f5c0a"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/latitude/0",
+        "path": "arco_raw/wind/latitude/0",
+        "bytes": 3048,
+        "sha256": "9c933a5c55488051408490b513257e39a2c1ce45fbdb220f6f696d78f4953aa1"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/longitude/0",
+        "path": "arco_raw/wind/longitude/0",
+        "bytes": 4144,
+        "sha256": "52dff25e168f747afb378735f7a5e000d3fcdc1f4daf55d4c4b2040c0aa3612c"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/time/0",
+        "path": "arco_raw/wind/time/0",
+        "bytes": 2327,
+        "sha256": "33a7edabe6a9ffb05f6f93de9a129e8bcaaee6c2efec9eeddb9142b31fb209ad"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/time/1",
+        "path": "arco_raw/wind/time/1",
+        "bytes": 2332,
+        "sha256": "50f34a0be24a4559e647a89d0bb0f597d71ead92faf86ab28e42bb6d4c911f56"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/time/2",
+        "path": "arco_raw/wind/time/2",
+        "bytes": 2331,
+        "sha256": "533fe44330ffa4326b97bb51448d76fad0a2cfe615b295d511b2c141170ec51e"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/time/3",
+        "path": "arco_raw/wind/time/3",
+        "bytes": 2327,
+        "sha256": "ad4008f746138c718c40d2671e5244edd04a807d89109ebccc18a746c8102c00"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/time/4",
+        "path": "arco_raw/wind/time/4",
+        "bytes": 2361,
+        "sha256": "484771390f5fab77976b81ebccb5488a58fc832c4e6dea7d0d6dff4e0bfe990d"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/time/5",
+        "path": "arco_raw/wind/time/5",
+        "bytes": 2332,
+        "sha256": "24e8c9911dec14881c5d9d6991b7a21ab2ecfd53b1bd3cd729374c9aa4d19834"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/time/6",
+        "path": "arco_raw/wind/time/6",
+        "bytes": 2327,
+        "sha256": "0d9db596e13864627b472bd81a37b79576121bbaeb693400d35447115b738c70"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/time/7",
+        "path": "arco_raw/wind/time/7",
+        "bytes": 2331,
+        "sha256": "fd9dbfedbf022081b2c7e603b20407eca75c9d022a2563873eb7186a6591837e"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/time/8",
+        "path": "arco_raw/wind/time/8",
+        "bytes": 2327,
+        "sha256": "8259f2beecb00b4c0c1b9cb0a588d9e16e2bc2a9fcb1c263e11ac23f5de7bce3"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/time/9",
+        "path": "arco_raw/wind/time/9",
+        "bytes": 2332,
+        "sha256": "a0cd6487076aa4511fd7b13587a4d74c7be7930e097a1087d8c0cc69c8caf52b"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/time/10",
+        "path": "arco_raw/wind/time/10",
+        "bytes": 2336,
+        "sha256": "1064bcc757eabd0b40add6f7e15af0e91176435e984044b53a8cf50a0dbe5f53"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/time/11",
+        "path": "arco_raw/wind/time/11",
+        "bytes": 2327,
+        "sha256": "66c237ac806c15d70782b233ba46253db0503a1b08ac6019143572a04305fb21"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/time/12",
+        "path": "arco_raw/wind/time/12",
+        "bytes": 2331,
+        "sha256": "5c315b9961a4a87372c134f04dce212f7721d73073eb8252f83e3337d8691d48"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/time/13",
+        "path": "arco_raw/wind/time/13",
+        "bytes": 2331,
+        "sha256": "d9d7bc74a2f7850fa5e5c0ec54b175d1a5ebca0de83d19f0fe3291c889f0fc42"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/time/14",
+        "path": "arco_raw/wind/time/14",
+        "bytes": 2327,
+        "sha256": "9560024d38b910e1af5c7e30e744cfa0064e7b17ff8c6cdb91e91deaba05f2bd"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/time/15",
+        "path": "arco_raw/wind/time/15",
+        "bytes": 2332,
+        "sha256": "08615e576308f72149a17b9c3ec46dcfce0b8e59e767f4e170f18f22111bf9e4"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/time/16",
+        "path": "arco_raw/wind/time/16",
+        "bytes": 1906,
+        "sha256": "4c13105913c10be514020a39a1d327324451c08eb8a4c3e7d224d7204c12c993"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/u10/13.248.125",
+        "path": "arco_raw/wind/u10/13.248.125",
+        "bytes": 2831467,
+        "sha256": "97a0f2b556ab690ff52aa327562a406049e4d4192250d62a27717829f9373596"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/u10/14.248.125",
+        "path": "arco_raw/wind/u10/14.248.125",
+        "bytes": 2832336,
+        "sha256": "45eee66dfd3810e2313fdb5acf2abb859e58354ed923e80b0fa0efab132ef015"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/u10/15.248.125",
+        "path": "arco_raw/wind/u10/15.248.125",
+        "bytes": 2827956,
+        "sha256": "ef15eff42d85b664e1efe8c978790510f80b2cb54b16247a0569a4032f73e986"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/u10/16.248.125",
+        "path": "arco_raw/wind/u10/16.248.125",
+        "bytes": 2833408,
+        "sha256": "a310e65b42bc34d117656fd55c8db7fb230a0ec37885c96ab89659688e90a02d"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/u10/17.248.125",
+        "path": "arco_raw/wind/u10/17.248.125",
+        "bytes": 2834677,
+        "sha256": "bf058b578f0584d520c2916b596f177bb04b48198cca721da80d542420f97a5e"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/u10/18.248.125",
+        "path": "arco_raw/wind/u10/18.248.125",
+        "bytes": 2840292,
+        "sha256": "6ba0cf0426e845e8d45e17b491d729ac8f8dd6799ed5e9f23dc3120ff1fe10ba"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/v10/13.248.125",
+        "path": "arco_raw/wind/v10/13.248.125",
+        "bytes": 2841591,
+        "sha256": "50ed268d8382bbdf7c66b94e153cdbaee84a4ad472d8bd8c307e01e97b816e7e"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/v10/14.248.125",
+        "path": "arco_raw/wind/v10/14.248.125",
+        "bytes": 2841597,
+        "sha256": "851e840ef1b83c62d220668da13333d2192415d10b93f4e37c3545cde1bfbff1"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/v10/15.248.125",
+        "path": "arco_raw/wind/v10/15.248.125",
+        "bytes": 2846884,
+        "sha256": "a1f0df8e74c65c38a73573266bf236ed5a81adb6d365f9fef2a531764fce0df7"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/v10/16.248.125",
+        "path": "arco_raw/wind/v10/16.248.125",
+        "bytes": 2832129,
+        "sha256": "ac0a6e0d2e29e1076ef12b29ea5a8e4edbb48d22d770db873f34d22e45467f1e"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/v10/17.248.125",
+        "path": "arco_raw/wind/v10/17.248.125",
+        "bytes": 2843989,
+        "sha256": "19e4f90955cdee72f0d2ecd469dee8168f3d36330bf97d8393a45683573715ef"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-008/arco/reanalysis_era5_land/sfc-wind/geoChunked.zarr/v10/18.248.125",
+        "path": "arco_raw/wind/v10/18.248.125",
+        "bytes": 2841046,
+        "sha256": "2a172289d864bf5d8d34c2d807ded43c053d739e191cb3a4dc5161e5a2b79485"
+      }
+    ],
+    "variables": [
+      "u10",
+      "v10"
+    ]
+  },
+  {
+    "group": "radiation",
+    "base_url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr",
+    "requests": [
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/.zmetadata",
+        "path": "arco_raw/radiation/.zmetadata",
+        "bytes": 7320,
+        "sha256": "b05eb96eb6ce573ba79d5eeab09e918cd407fb6ad2df72ad6e834f8a7be30b08"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/latitude/0",
+        "path": "arco_raw/radiation/latitude/0",
+        "bytes": 3048,
+        "sha256": "9c933a5c55488051408490b513257e39a2c1ce45fbdb220f6f696d78f4953aa1"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/longitude/0",
+        "path": "arco_raw/radiation/longitude/0",
+        "bytes": 4144,
+        "sha256": "52dff25e168f747afb378735f7a5e000d3fcdc1f4daf55d4c4b2040c0aa3612c"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/time/0",
+        "path": "arco_raw/radiation/time/0",
+        "bytes": 2327,
+        "sha256": "5f9f38088dcca0ca7fdbfe1113af65cccb1793479e4ca51925fc6ea4c4ce2d77"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/time/1",
+        "path": "arco_raw/radiation/time/1",
+        "bytes": 2326,
+        "sha256": "bed9a3556f9a9722e03899be34fd5844056a8b3d221fa8807d2d684dc61d63ef"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/time/2",
+        "path": "arco_raw/radiation/time/2",
+        "bytes": 2332,
+        "sha256": "6e4ce9fa594cc3cb581f9110b62eef395d5cd337c6b0441a77a6c03e0247bcbb"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/time/3",
+        "path": "arco_raw/radiation/time/3",
+        "bytes": 2327,
+        "sha256": "684aa6ee175fd3948e6fdfbf2d512d6040ce51b37c367b43f60ef2f481312be8"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/time/4",
+        "path": "arco_raw/radiation/time/4",
+        "bytes": 2351,
+        "sha256": "1bcf687b7dd171fb265a6f3b2aea9b2b129d4907f9d8eeb3b72a23e12f52a1d4"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/time/5",
+        "path": "arco_raw/radiation/time/5",
+        "bytes": 2331,
+        "sha256": "70f67134edb0ebed3ceb71441676985f2948abecd74e2f9d7fb96b77ccefc475"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/time/6",
+        "path": "arco_raw/radiation/time/6",
+        "bytes": 2327,
+        "sha256": "78594858921a3fb0381fe5141eb935d499cb70632db14bcb94714492d751db39"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/time/7",
+        "path": "arco_raw/radiation/time/7",
+        "bytes": 2331,
+        "sha256": "b319110477ee3ff2cc88cf49fd51a6fc6e7b725edd5d9b9f3591963d72251d18"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/time/8",
+        "path": "arco_raw/radiation/time/8",
+        "bytes": 2326,
+        "sha256": "af1b104576a3266524dd937b8c31a77732c8f8c39775378938199ce8c133f5b8"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/time/9",
+        "path": "arco_raw/radiation/time/9",
+        "bytes": 2326,
+        "sha256": "e350db02dff8eddb3e2c42de26db7fbaa95785eb6a777ed5eadfe16851d711c7"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/time/10",
+        "path": "arco_raw/radiation/time/10",
+        "bytes": 2330,
+        "sha256": "fc453045086e329f7f5169c17386e60beb4967195b7673cdaa6ee77cec741703"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/time/11",
+        "path": "arco_raw/radiation/time/11",
+        "bytes": 2327,
+        "sha256": "42ab2725b675aa19f659c7530b0a700b1dcf2b6a3a7213f1e063f3d3ac23fa32"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/time/12",
+        "path": "arco_raw/radiation/time/12",
+        "bytes": 2331,
+        "sha256": "cd9ae0f172ccb77706835455161cadb9dbc6322e23dbd14209ccf8295fb951cf"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/time/13",
+        "path": "arco_raw/radiation/time/13",
+        "bytes": 2331,
+        "sha256": "0738f779452dec47b8ea046e66c606c9c9160c2a0ac50b3879b54888e10efa72"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/time/14",
+        "path": "arco_raw/radiation/time/14",
+        "bytes": 2327,
+        "sha256": "1815d63d29cf89b776879d6d24013ebebf7ea84dcc5b2e522b9c71373fe46760"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/time/15",
+        "path": "arco_raw/radiation/time/15",
+        "bytes": 2331,
+        "sha256": "07f547db55c815a01d0f3033ca6683722f3b11d8b8ed33e80655900cce3d3a55"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/time/16",
+        "path": "arco_raw/radiation/time/16",
+        "bytes": 1922,
+        "sha256": "95ce09b721491ae2a3c4bbd02b0d0a3eeaaa4c761ef1fd3f1a68af8c04908ac6"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/ssrd/13.248.125",
+        "path": "arco_raw/radiation/ssrd/13.248.125",
+        "bytes": 1739850,
+        "sha256": "5ad6d94992ccc9d103993c7c5e484992f6980fac55f4bb969694a3f2565ed720"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/ssrd/14.248.125",
+        "path": "arco_raw/radiation/ssrd/14.248.125",
+        "bytes": 1745582,
+        "sha256": "5766c598e34e9edac2e094588d9d1fe6489fb6addea40d8386c55a46cb693f6d"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/ssrd/15.248.125",
+        "path": "arco_raw/radiation/ssrd/15.248.125",
+        "bytes": 1739274,
+        "sha256": "18fa6cdf6289a66ab9029750b7d23e2f54fb820713081133811f4948ef8c57cc"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/ssrd/16.248.125",
+        "path": "arco_raw/radiation/ssrd/16.248.125",
+        "bytes": 1738785,
+        "sha256": "ec2425be3f534a8705b71b943be2baf2424f376081e6f3487e3a3ca3856b0a5f"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/ssrd/17.248.125",
+        "path": "arco_raw/radiation/ssrd/17.248.125",
+        "bytes": 1741489,
+        "sha256": "1d7f6d25aa5088533a9947f7d1b746f3a7981358ffbd4800cbd90a28bb044857"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/ssrd/18.248.125",
+        "path": "arco_raw/radiation/ssrd/18.248.125",
+        "bytes": 1741238,
+        "sha256": "8e27d2eb6764f4d18b4c30baa50197f083b29c05d3985bc99ced1dcee24715bb"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/strd/13.248.125",
+        "path": "arco_raw/radiation/strd/13.248.125",
+        "bytes": 2808266,
+        "sha256": "02a976877fc9cf10bedb011a823cacfaf62cb31dc84cf3d03e9b819b82d4ba8a"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/strd/14.248.125",
+        "path": "arco_raw/radiation/strd/14.248.125",
+        "bytes": 2804291,
+        "sha256": "db9e39ea1ec041d9bcf8441d511e39d651fe0014576d90b8eb955e7ee1115665"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/strd/15.248.125",
+        "path": "arco_raw/radiation/strd/15.248.125",
+        "bytes": 2806938,
+        "sha256": "b72510502fe848caa6d3ceb38f8bbc4f4782aa097b2b3b3271fbe494cbf948ed"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/strd/16.248.125",
+        "path": "arco_raw/radiation/strd/16.248.125",
+        "bytes": 2801459,
+        "sha256": "51cb05a2f17442fff89e544cd099fdfa3c003e55ee3144a0f6576168cc6ea942"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/strd/17.248.125",
+        "path": "arco_raw/radiation/strd/17.248.125",
+        "bytes": 2800317,
+        "sha256": "da356cebf6d3a8ef30fd5dcc754b5bc7ff9a74bb17bc842d41618cdfc0faf718"
+      },
+      {
+        "url": "https://arco.datastores.ecmwf.int/cadl-arco-geo-010/arco/reanalysis_era5_land/sfc-radiation-heat/geoChunked.zarr/strd/18.248.125",
+        "path": "arco_raw/radiation/strd/18.248.125",
+        "bytes": 2817034,
+        "sha256": "0fa37f54f67165e229df266aec994012031f9b18e7575df495d43e41afd92249"
+      }
+    ],
+    "variables": [
+      "ssrd",
+      "strd"
+    ]
+  }
+]

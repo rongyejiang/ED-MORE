@@ -1,0 +1,177 @@
+{
+  "model_commit": "f49d50c89f01e5747eee2950a9cbe1d8e08371a5",
+  "selected_cell": {
+    "site": [
+      9.1568,
+      -79.8486
+    ],
+    "cell": [
+      9.2,
+      -79.8
+    ],
+    "distance_km": 7.178839725057937,
+    "grid_indices": [
+      808,
+      2802
+    ],
+    "geopotential_m2_s2": 715.6338901417039,
+    "elevation_float32_m": 72.97434997558594,
+    "land_fraction": 0.731677170280622,
+    "all_120_probe_hours_finite_at_nearest_cell": true,
+    "selection": "Nearest coordinate cell is valid; hence also nearest valid cell on global regular grid. Full-period validity checked for every downloaded hour."
+  },
+  "native_script_sha256": {
+    "scripts/prepare_input/era5/download_era5land_gdex.py": "45914ec4d52f4569e12b31c9a11039ca1ca360b03604739b3017300462ebdd38",
+    "scripts/prepare_input/era5/era5land_common.py": "f22f4fa46439bb9c8fe6e59fa5d08c94ce918dbac0a5d9612f6a552756384573",
+    "scripts/prepare_input/era5/build_era5land_archive.py": "0477d1cf49c812a4fcbf58ef749c610d038d303400b3dad2cb09b36f22cb60b4",
+    "scripts/prepare_input/era5/build_era5land_static.py": "7ff0e5e9bd00b9bde596689d75bda98503f587a9c114d1dfb265c5afe120592e",
+    "scripts/prepare_input/era5/make_forcing_file.py": "69832d4fb59f07cc8a491cb81ece77fcc9243e32595d0bcaf2f889441a0cd514",
+    "scripts/prepare_input/era5/download_era5land_cds.py": "2aa94a45fe0374618b573c98b7aa0c11dfbdf8181f4e189a1e59182741ba619b",
+    "scripts/prepare_input/era5/postprocess_era5land.py": "5214b725e0c9ae6ea1212749a9747b6ff2b37b9d1cf08f31435e6120cf837907",
+    "examples/example05_forest_regeneration/plot_regeneration.py": "ee0cb4e8995f6a7278e4c182cd19b7a6d2638d1ba53ac7de049f4917e7ece260",
+    "examples/example05_forest_regeneration/README.md": "5f710e70ddf29b460b46adc471cc328966096fbd29fabce4320d044dc496325f"
+  },
+  "historical_adapter_sha256": "a1accb0500ba323f741fe9a96929c5bebd2e3fa29fe33e9f14d3cef5bac73ab9",
+  "historical_static_preparation_sha256": "8688a23ff170e5bc0edd7e151f363a391353bbe9fd79ea3f05f6e45487939087",
+  "forcing_sha256": "bc8d693a5f9499fb6a402bd032e4709783e872dec533434b690ca30492d6be6d",
+  "portability_changes": [
+    "Explicit source/input/output arguments replace local paths and wildcard imports.",
+    "Read-only scalar static-cell evidence replaces network selection probe and DAP parsing.",
+    "Output directory must not exist; input hours, variables and native helper hashes are checked.",
+    "No census copying, model launch or downloads.",
+    "Original float32 conversion/clipping and native bounds/quantization/writers are retained.",
+    "History timestamps and provenance text differ; numerical payload equality is tested."
+  ],
+  "static_sources": [
+    {
+      "url": "https://tds.gdex.ucar.edu/thredds/dodsC/files/d633008/e5land.oper.invariant/202601/e5land.oper.invariant.z_000128.2026010101-2026010101.nc.dods?z%5B0%3A1%3A0%5D%5B808%3A1%3A808%5D%5B2802%3A1%3A2802%5D",
+      "bytes": 384,
+      "sha256": "23c34f62697c53815ef527dba1870663178717e13b193879ca144d1413f0c11a",
+      "min": 715.6338901417039,
+      "max": 715.6338901417039
+    },
+    {
+      "url": "https://tds.gdex.ucar.edu/thredds/dodsC/files/d633008/e5land.oper.invariant/202601/e5land.oper.invariant.lsm_000172.2026010101-2026010101.nc.dods?lsm%5B0%3A1%3A0%5D%5B808%3A1%3A808%5D%5B2802%3A1%3A2802%5D",
+      "bytes": 390,
+      "sha256": "466fd995a1b77ed1f2ffd87756cffde94079e6065e02a9bbe64b33da5ea88b39",
+      "min": 0.731677170280622,
+      "max": 0.731677170280622
+    }
+  ],
+  "historical_result_files": {
+    "regen-S-18800101000000.nc": {
+      "sha256": "cebd473f12e1602b91afc151f17c78bcb48a819d46ea2bfb68c2ea84e2295842",
+      "bytes": 1915711
+    },
+    "regen-S-19200101000000.nc": {
+      "sha256": "7c4a98af3390f61c20166eb1ca9878d003cceb115871c6b6316b6294b136aa89",
+      "bytes": 2222843
+    },
+    "regen-S-16200101000000.nc": {
+      "sha256": "be3fecfef30c6ae946b9f0978ca7cefa215c85dd68823b4589cb16e4f69f230b",
+      "bytes": 921784
+    },
+    "regen-S-16800101000000.nc": {
+      "sha256": "6474515157088574c5b1af406c3f139322040ddfcdc38c35a519456acaf5e9fb",
+      "bytes": 1775707
+    },
+    "regen-S-17000101000000.nc": {
+      "sha256": "3e4b5711a22d003f5a93278752e7d7d4374eed14fe5699cd1cc73ce8cf19b5d0",
+      "bytes": 1947466
+    },
+    "regen-S-17400101000000.nc": {
+      "sha256": "95d00ccbf490bb8da1e48c7618046d890bf96dd0350a437c79194c070300dfdf",
+      "bytes": 2085636
+    },
+    "regen-S-18600101000000.nc": {
+      "sha256": "68185480f7ac2d1bb6a6f3ae69b539b526317ba5cefd2f1208f91be3f25bad3e",
+      "bytes": 1977633
+    },
+    "regen-S-17200101000000.nc": {
+      "sha256": "2eb94e467c972ae1d077e6729f6733f673ea804955282309ea6c4dbc843b7fc9",
+      "bytes": 2114547
+    },
+    "regen-S-19400101000000.nc": {
+      "sha256": "9314cbb646451838b55badbf102e8fedfd1c6518a6f0c14b5994ec5ac2348c1c",
+      "bytes": 2003145
+    },
+    "regen-S-16600101000000.nc": {
+      "sha256": "3a1129d148b0d3e9212ff5d0626010c559da48d129f8e11dc18c64d18ed594f7",
+      "bytes": 1822888
+    },
+    "regen-S-16400101000000.nc": {
+      "sha256": "cc411a6539738504b01e46e35a51ee2700682e0b08364b24730e43f3c0915953",
+      "bytes": 1741738
+    },
+    "regen-S-19800101000000.nc": {
+      "sha256": "c5ed1bfde51b9a68a78ec40f1bb9dd4985af4e739b5af23b11bc2212138921f7",
+      "bytes": 2060276
+    },
+    "regen-S-20210101000000.nc": {
+      "sha256": "9ad1525b8a45209d861663d1cf4b0bf7324d8ea38bfcf06b0357537755e4f623",
+      "bytes": 1942754
+    },
+    "regen-Y.nc": {
+      "sha256": "93aad10b689d611485569c980148792b08d47a02ed2d13efb9ab502525e9ee8f",
+      "bytes": 4583019
+    },
+    "regen-S-18400101000000.nc": {
+      "sha256": "a9be41ec8a8f5678d56cdbd4fef8b9ee47567f9f2bed25e71213a21069fbfc8d",
+      "bytes": 1983762
+    },
+    "regen-S-19000101000000.nc": {
+      "sha256": "5c8317f7b44d5a752c09c157ae55fd32e78c5fd07ae74bd56282ebc10eeea6dc",
+      "bytes": 2203719
+    },
+    "regen-S-20000101000000.nc": {
+      "sha256": "0621b54284cd7a5b4a8d69f9880f80de813f0e5b270b9c4cfc81cc4c266c90fe",
+      "bytes": 1931483
+    },
+    "regen-S-18000101000000.nc": {
+      "sha256": "c345ffebf5545235e84887dc187f0e838e7edff5a1c412c31332516d3b3bfa4b",
+      "bytes": 1767711
+    },
+    "regen-M.nc": {
+      "sha256": "4ca1c52a2e73df24fc77f6323ef3390978f0ac23ac71849581faceb6469d230d",
+      "bytes": 47752579
+    },
+    "regen-S-18200101000000.nc": {
+      "sha256": "6aab4f47a7c8a70b3e96a2b9fbeb60e807ca58b9c515739507e86d2d476ce9bb",
+      "bytes": 1765094
+    },
+    "regen-S-17800101000000.nc": {
+      "sha256": "f1378b9c70ca1e9344be0f81b72c2b963b94c3556677e8137b1abe6a6c4ff32b",
+      "bytes": 1731060
+    },
+    "regen-S-19600101000000.nc": {
+      "sha256": "2a0f9af76d49dfcf38c85fbf0742f855da6a1167baaf7cd7f97e36ce9a9a4f43",
+      "bytes": 2006147
+    },
+    "regen-S-17600101000000.nc": {
+      "sha256": "49efdddfc2d248dac3e515c0a76897329235ec2bd2dc9e297e5982a51b76d68e",
+      "bytes": 2180587
+    },
+    "regen-S-20200101000000.nc": {
+      "sha256": "3754690da408ab18e5e70fb98e882bf70f4fa140d468ca165329715d3ee5a5eb",
+      "bytes": 1916978
+    }
+  },
+  "historical_inputs": {
+    "examples/example05_forest_regeneration/ed_config_regeneration.toml": {
+      "sha256": "15c63de290ec666cae00c2e207baa028157edfb71cfe273f6ccc76857fcbecbf",
+      "bytes": 5812
+    },
+    "examples/example05_forest_regeneration/pft_parameters.toml": {
+      "sha256": "0ec2138c49c230c19f5c44f70f5e96b9b569df714628a4b21a19a491f63d4730",
+      "bytes": 11834
+    },
+    "examples/example05_forest_regeneration/run_example.py": {
+      "sha256": "17e3e0042cfe294aad8e20228cc56fbf9a31794695a12314fdb7b9ca20e154d8",
+      "bytes": 4155
+    },
+    "data/co2/co2_cmip7_global_annual_1000-2022.txt": {
+      "sha256": "4e0024b1e9da547fc8092665d197497706df416df08324f80f7ac641de400e05",
+      "bytes": 16715
+    }
+  }
+}
