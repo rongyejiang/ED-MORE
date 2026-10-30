@@ -60,4 +60,4 @@ Using the retained source chunks, the portable extractor and adapter recreated a
 
 The portable comparison script reproduced all 63 saved result values exactly. These checks verify that the shared preparation code preserves the recorded workflow; they do not establish why that simulation differs from the author's reference run. No new model run or calibration was performed while preparing the original adapter package or the later evidence update; the later update reports already completed compiler comparisons.
 
-Prepared with help from Codex; the original scripts, inputs, outputs and verification logs are retained locally.
+The original scripts, inputs, outputs and verification logs are retained locally.

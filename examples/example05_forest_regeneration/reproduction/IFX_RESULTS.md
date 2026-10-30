@@ -123,4 +123,4 @@ These are the seven years and nine metrics in the pinned README. GNU matches 34/
 | 2020 | gpp | 34.0 | 33.9444164705 | 33.9705963048 | no / yes |
 | 2020 | npp | 17.2 | 17.1494827691 | 17.1589967645 | no / yes |
 
-Prepared with help from Codex; numbers were checked against retained inputs, outputs and native scripts. Raw model output and downloaded data are not committed.
+Numbers were checked against retained inputs, outputs and native scripts. Raw model output and downloaded data are not committed.
