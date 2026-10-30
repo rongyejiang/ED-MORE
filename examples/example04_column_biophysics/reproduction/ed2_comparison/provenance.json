@@ -1,0 +1,111 @@
+{
+  "scope": "Hashes identify retained local evidence, not public downloadable files.",
+  "model_commits": {
+    "MORE": "f49d50c89f01e5747eee2950a9cbe1d8e08371a5",
+    "ED2": "125f814dbbd7c258cf623254ca9554a7e59807fd"
+  },
+  "documentation_base_commit": "c6f7e2fbfa0f00b8f1f25c972acfc8f99f6f8e0c",
+  "source_records": [
+    {
+      "archive_relative_path": "bci_issue13_overnight_20261030/comparison/summary.json",
+      "sha256": "387f3301f16077a2933acc9cd980e34bf80f7e06e412db243c4cf0620d6a9b92",
+      "bytes": 43109
+    },
+    {
+      "archive_relative_path": "bci_soil_interception_factorial_20261029/analysis/analysis_summary.json",
+      "sha256": "9292f3b99dbdf8ad9e41e9f78c4e07834f9e6e8246526adb60511cb7f90b78b7",
+      "bytes": 116776
+    },
+    {
+      "archive_relative_path": "bci_fitted5y_20261028/example_comparison.json",
+      "sha256": "b02f6e0a539cb231ea744f2e41f2de0cc4d374db5c533ecb586afb3dc69fcad2",
+      "bytes": 13826
+    },
+    {
+      "archive_relative_path": "bci_issue13_overnight_20261030/final_acceptance.json",
+      "sha256": "9448d6d68993969b2a3798a07ede1989a0cdbf3efa2e9b210f76b4bc79133883",
+      "bytes": 11372
+    },
+    {
+      "archive_relative_path": "bci_soil_interception_factorial_20261029/validation_5y.json",
+      "sha256": "7f108adfccd45b00c6fd64485bdf48137e6661654f376cbcebd8ce63cbc18d51",
+      "bytes": 76585
+    },
+    {
+      "archive_relative_path": "bci_issue13_overnight_20261030/comparison/checkpoint_v2_sensitivity.json",
+      "sha256": "30637caee0e2c7c28fd54417de44984bc1acc85ba0fe0894ef8227a467e5f6ac",
+      "bytes": 683592
+    },
+    {
+      "archive_relative_path": "bci_issue13_overnight_20261030/comparison/timestep_sensitivity.json",
+      "sha256": "7df48af236cebde23701bb27ffe7e10448ba20be3433e5d5309b73526a011679",
+      "bytes": 1438547
+    },
+    {
+      "archive_relative_path": "bci_issue13_overnight_20261030/audit/complete_water_accounting_independent_review.json",
+      "sha256": "b66f3545217bd1fcb71788ecbb4bb02b6e3cdf6a3c89cff9050f256aa1d4673f",
+      "bytes": 1947747
+    },
+    {
+      "archive_relative_path": "bci_issue13_overnight_20261030/audit/more_water_solver_warning_review.json",
+      "sha256": "75d72696e8e45500f56c41c14a04f7c0231d56a6797ee6213f72f2b59ccc5c82",
+      "bytes": 69207
+    },
+    {
+      "archive_relative_path": "bci_issue13_overnight_20261030/ed2/cases.json",
+      "sha256": "3c1050b5a6b7edf19306a23a0e84b8f5a89230fe1ac72abcfb2f94cd812c8c40",
+      "bytes": 135630
+    },
+    {
+      "archive_relative_path": "bci_issue13_overnight_20261030/ed2/binaries_terminal.json",
+      "sha256": "32f92afcb026a0f21d79f76f618dcb131ce98987a0de87c64da2aadb4ed3a771",
+      "bytes": 895
+    },
+    {
+      "archive_relative_path": "bci_issue13_overnight_20261030/forcing/scenario_registry.json",
+      "sha256": "d5b8b6dda4d48288c8ad012ceac61ca1a373f19e742a875b18bd05d6a1b50dd0",
+      "bytes": 3140
+    },
+    {
+      "archive_relative_path": "bci_local_soil_tests_20261029/soil_data_review.json",
+      "sha256": "fdccb3d47d110bbfb68b8e4ad290563412649fd0996ec3959409f4476b925086",
+      "bytes": 7610
+    }
+  ],
+  "local_review_bundle_sha256": "4d5f1834660f430a31cddf4f4e217fa9c60726b74503c31fac5fc56f3ecc6e7d",
+  "primary_config_sha256": {
+    "ED2/tower_on": "401865110d51cae7be468c24b1c111d9db5392369a430185bc180417b8b9cba2",
+    "ED2/tower_off": "7722f143b8dea0c839f695ac33f770ceec47ce599f2e9ac9cf1bc5542c930e0e",
+    "ED2/era5_on": "34638ff3983e847727082b39ad873f240682b35d730b777570269372e9cc697d",
+    "ED2/era5_off": "c80fa3b035667d21cb665559f7362946a6af13e2d54d49cacfe6f67f8fe3030b",
+    "ED2/rain_only_on": "7de33b5fb6ce77e0b5314f5cf2e493d5339d87465e7c6cdb604e676939dd028d",
+    "ED2/rain_only_off": "83c9c64e74811c04f32a7a8b1f1a9d15f7a105d3cb94325ad026e66574eeb68c",
+    "MORE/tower_900/on": "03d370e4c12bf7f30585b4c7c95aff027e881122bf853a246a4fb09715a543e6",
+    "MORE/tower_900/off": "3c56ee45f4fbf9b97f3605a7dc11a2accb227f613e333fa587f0905cbfb07e56",
+    "MORE/full_era5land_900/on": "865f1fef4ed456b1d9d707e0aad178201eae746ca90d385e466eb02fecf87403",
+    "MORE/full_era5land_900/off": "c40dac6f32835e00990fa12ed3e4340f9f36632b8aa7dcd92e5e0c744c014ee1",
+    "MORE/rain_only_900/on": "bbbb72dfdf48ce331df2e5ae3ee8d05bd037b9df7761814529b796ee97d6bf11",
+    "MORE/rain_only_900/off": "4aa81c33865604d05f8e46640ff44bd3b5cd56084d1cd5f3dc831e6af05f4234"
+  },
+  "shared_CO2_sha256": "4e0024b1e9da547fc8092665d197497706df416df08324f80f7ac641de400e05",
+  "forcing_sha256": {
+    "tower": {
+      "MORE_sha256": "62031b631991ca7716fd9e7a27483608a49c7c7d521562e0ecb8947aa3b5f3ee",
+      "ED2_header_sha256": "b982555111eea332b32932d5e27067f017ccd85d82a044fc25e15a15f6dec4de"
+    },
+    "full_era5land": {
+      "MORE_sha256": "7140a4fce5c75233151a99bfac094b1204c0c1cef313291133a964ce4c636d01",
+      "ED2_header_sha256": "4f8512ac9e606cc882d09bfbb40570646314a6a92f0cb3d40b2da45957de286f",
+      "manifest_sha256": "194ddac5579bf55d3f9e2fc89d1bb2acb74ee2945e696a864d394daa1a7c4758"
+    },
+    "rain_only": {
+      "MORE_sha256": "9ea430fab8bd2b08aaa1dcf8042e11fdbaa81d43d419af97b8ab29cf46f330ae",
+      "ED2_header_sha256": "41d7600f973737d28b160fb0d2fcb42f80135d6e92935b233e9e49e2c1396f73"
+    }
+  },
+  "MORE_calibrated_PFT_sha256": "d8547ddaf8c637b8694a92fc8d4123fa71bee0cc12c24b127514a6894b5d7e07",
+  "ED2_terminal_prefetch_patch_only_sha256": {
+    "terminal_on.patch": "0363b1c043039467435c481866e5cb162823b4eb3f700c617233f25c11292fdf",
+    "terminal_off.patch": "0363b1c043039467435c481866e5cb162823b4eb3f700c617233f25c11292fdf"
+  }
+}

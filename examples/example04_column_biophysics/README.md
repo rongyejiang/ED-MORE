@@ -6,6 +6,10 @@ each patch of a forest. The site is the Barro Colorado Island (BCI) flux tower i
 PA-Bar, 41 m above a seasonal tropical forest), over its five years, 2012–2017. How the column is
 solved: [`docs/science/coupled_biophysics.md`](../../docs/science/coupled_biophysics.md).
 
+A separate [local ED2–ED-MORE comparison](reproduction/ed2_comparison/README.md) records
+completed soil/interception sensitivity experiments, their settings and numerical qualifications.
+Those modified runs are distinct from this example's published calibration and evaluation.
+
 The example:
 
 1. builds an ED-MORE forcing file from the tower's own meteorology;
