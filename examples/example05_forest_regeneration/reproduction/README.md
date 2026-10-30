@@ -1,6 +1,8 @@
 # BCI Example 05 reproduction evidence
 
-This folder documents one completed BCI regeneration run and the small adapter used to prepare its forcing. It is shared on a fork for inspection, not as a proposed model fix. The cause of the differences from the example's README remains unresolved.
+This folder documents the completed gfortran dev and ifx production BCI regeneration runs, a ten-year ifx dev check, and the small adapter used to prepare their shared forcing. It is shared on a fork for inspection, not as a proposed model fix. The cause of the differences from the example's README remains unresolved.
+
+The [ifx follow-up](IFX_RESULTS.md) contains the build settings, verification and full comparison; [ifx_results.json](ifx_results.json) holds the numerical evidence. The original gfortran report and forcing preparation below are retained.
 
 - **Model:** ED-MORE v0.4.1, `f49d50c89f01e5747eee2950a9cbe1d8e08371a5`.
 - **Run:** 1600–2020, bare-ground initialization, shipped configuration and PFT parameters, no refitting; gfortran 15.2.0, dev build, 8 threads.
@@ -56,6 +58,6 @@ The last comparison only reads an existing `regen-Y.nc`; it does not run the mod
 
 Using the retained source chunks, the portable extractor and adapter recreated all 1,920 variable-month files plus the static file. Every variable and mask matched the historical archive. The unchanged native `make_forcing_file.py` then produced identical values and masks for all 13 variables, including time, coordinates, elevation and derived wind. File bytes differ because history/provenance attributes contain new timestamps and text; no byte-identical NetCDF claim is made.
 
-The portable comparison script reproduced all 63 saved result values exactly. These checks verify that the shared preparation code preserves the recorded workflow; they do not establish why that simulation differs from the author's reference run. No new model run, compiler comparison or calibration was performed while preparing this folder.
+The portable comparison script reproduced all 63 saved result values exactly. These checks verify that the shared preparation code preserves the recorded workflow; they do not establish why that simulation differs from the author's reference run. No new model run or calibration was performed while preparing the original adapter package or the later evidence update; the later update reports already completed compiler comparisons.
 
 Prepared with help from Codex; the original scripts, inputs, outputs and verification logs are retained locally.

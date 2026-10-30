@@ -1,0 +1,1323 @@
+{
+  "schema": "BCI Example05 recorded build comparison v1",
+  "checked_at_utc": "2026-10-30T05:45:58.888540+00:00",
+  "model_tag": "v0.4.1",
+  "model_commit": "f49d50c89f01e5747eee2950a9cbe1d8e08371a5",
+  "period_inclusive_years": [
+    1600,
+    2020
+  ],
+  "threads_all_runs": 8,
+  "builds": {
+    "gfortran_dev": {
+      "compiler": "GNU Fortran 15.2.0",
+      "kind": "dev",
+      "cpu_target": "generic",
+      "ipo": false
+    },
+    "ifx_production": {
+      "compiler": "ifx 2026.1.0 20260617",
+      "kind": "production",
+      "cpu_target": "host",
+      "ipo": true
+    },
+    "ifx_dev": {
+      "compiler": "ifx 2026.1.0 20260617",
+      "kind": "dev",
+      "cpu_target": "generic",
+      "ipo": false
+    }
+  },
+  "dependencies": {
+    "netcdf_c": "4.10.1",
+    "cmake": "4.4.3",
+    "python": "3.12.14"
+  },
+  "library_sha256": {
+    "gfortran_dev": "659620c5435e7ab8cc4df828dc01556b418f00c109c65e977869f6394829e5a5",
+    "ifx_production": "dc57c63def350057de63b93d4e358bcb371e34f2b629b91f85ede9c9aaf51a00",
+    "ifx_dev": "bd864ce561532db56f97dc68fdd1808aca64a87e92b8f9c4c7b2aa061516791c"
+  },
+  "shared_input_sha256": {
+    "forcing_sha256": "bc8d693a5f9499fb6a402bd032e4709783e872dec533434b690ca30492d6be6d",
+    "native_generated_main_pft_equal": true,
+    "script_sha256": "17e3e0042cfe294aad8e20228cc56fbf9a31794695a12314fdb7b9ca20e154d8",
+    "pft_source_sha256": "0ec2138c49c230c19f5c44f70f5e96b9b569df714628a4b21a19a491f63d4730",
+    "io_config_sha256": "f268ab2ecd19b2685aa2b11455ffc7ed312165fa1f3dcf8238030eaf5f918a64",
+    "co2_sha256": "4e0024b1e9da547fc8092665d197497706df416df08324f80f7ac641de400e05"
+  },
+  "validation": {
+    "native_generated_runtime_configs_match_all_five_runs": true,
+    "effective_parameters_match_within_long_and_pilot_groups": true,
+    "all_four_source_copies_match_pinned_git_blobs": true,
+    "tracked_source_files_per_copy": 432,
+    "explicit_library_probe_and_runner_checked": true,
+    "found_new_inadvertent_execution_error": false,
+    "new_simulation_for_publication": false
+  },
+  "completed_output_checks": {
+    "gfortran_long": {
+      "Y": {
+        "sha256": "93aad10b689d611485569c980148792b08d47a02ed2d13efb9ab502525e9ee8f",
+        "records": 421,
+        "finite_valid_values": 89902,
+        "diagnostics": {
+          "mean_work_water_nfail_py": [
+            {
+              "year": 1921,
+              "month": null,
+              "value": 2.094657703461259e-06
+            }
+          ],
+          "mean_work_rk45_rescue_py": [],
+          "mean_work_clamp_stage_py": []
+        }
+      },
+      "independent_2010": {
+        "agb_direct_polygon_MgC_ha": 127.19845958819451,
+        "agb_sum_pfts_MgC_ha": 127.19845958819457,
+        "stems_ge10_ha": 310.2092005349245
+      },
+      "M": {
+        "sha256": "4ca1c52a2e73df24fc77f6323ef3390978f0ac23ac71849581faceb6469d230d",
+        "records": 5052,
+        "finite_valid_values": 1083255,
+        "diagnostics": {
+          "mean_work_water_nfail_py": [
+            {
+              "year": 1921,
+              "month": 7,
+              "value": 2.4662905218172886e-05
+            }
+          ],
+          "mean_work_rk45_rescue_py": [],
+          "mean_work_clamp_stage_py": []
+        }
+      },
+      "checkpoint": {
+        "sha256": "9ad1525b8a45209d861663d1cf4b0bf7324d8ea38bfcf06b0357537755e4f623",
+        "area_sum": 1.0,
+        "cohorts": 1004,
+        "patches": 25
+      }
+    },
+    "ifx_long": {
+      "Y": {
+        "sha256": "ed8b21d586fc5019e235ad0c37a8509ecd02122d8682c9259a02d2d6bb01239f",
+        "records": 421,
+        "finite_valid_values": 89902,
+        "diagnostics": {
+          "mean_work_water_nfail_py": [
+            {
+              "year": 1921,
+              "month": null,
+              "value": 2.1056994404637057e-06
+            }
+          ],
+          "mean_work_rk45_rescue_py": [],
+          "mean_work_clamp_stage_py": []
+        }
+      },
+      "independent_2010": {
+        "agb_direct_polygon_MgC_ha": 126.11302422775313,
+        "agb_sum_pfts_MgC_ha": 126.11302422775316,
+        "stems_ge10_ha": 321.14823068178526
+      },
+      "M": {
+        "sha256": "ef2da42d8b2f003603249d3bb89e62a6f54b35797f598d4de38f29172d8334bc",
+        "records": 5052,
+        "finite_valid_values": 1083255,
+        "diagnostics": {
+          "mean_work_water_nfail_py": [
+            {
+              "year": 1921,
+              "month": 7,
+              "value": 2.4792912766750084e-05
+            }
+          ],
+          "mean_work_rk45_rescue_py": [],
+          "mean_work_clamp_stage_py": []
+        }
+      },
+      "checkpoint": {
+        "sha256": "4baa54be557be078a21336d5db49018fa6bb602d156132e2de8f329b4fc49424",
+        "area_sum": 1.0,
+        "cohorts": 992,
+        "patches": 25
+      }
+    },
+    "gfortran_pilot": {
+      "Y": {
+        "sha256": "fd699d9ecd12cf6942b9dac9add00e5aa778bd9f9e9f749fec9ae64c1ec29a27",
+        "records": 10,
+        "finite_valid_values": 2142,
+        "diagnostics": {
+          "mean_work_water_nfail_py": [],
+          "mean_work_rk45_rescue_py": [],
+          "mean_work_clamp_stage_py": []
+        }
+      },
+      "M": {
+        "sha256": "2f5721a0714af921f9d4482f0ea44c782a29cbb8efe016e39160bffc9f9dda1c",
+        "records": 120,
+        "finite_valid_values": 25242,
+        "diagnostics": {
+          "mean_work_water_nfail_py": [],
+          "mean_work_rk45_rescue_py": [],
+          "mean_work_clamp_stage_py": []
+        }
+      },
+      "checkpoint": {
+        "sha256": "e523fd32397c54dc3c838b294eed654cccf03b32c8862cf8d7547082ab87fa32",
+        "area_sum": 1.0,
+        "cohorts": 94,
+        "patches": 2
+      }
+    },
+    "ifx_production_pilot": {
+      "Y": {
+        "sha256": "fc113e2782a07e63071e3efe550fdc7cdfb5f99355610c561f2f9daf20a93d58",
+        "records": 10,
+        "finite_valid_values": 2142,
+        "diagnostics": {
+          "mean_work_water_nfail_py": [],
+          "mean_work_rk45_rescue_py": [],
+          "mean_work_clamp_stage_py": []
+        }
+      },
+      "M": {
+        "sha256": "3461753b4ab835aca6170b511311c309dd27571bdb203df76d977aa4ce86db21",
+        "records": 120,
+        "finite_valid_values": 25242,
+        "diagnostics": {
+          "mean_work_water_nfail_py": [],
+          "mean_work_rk45_rescue_py": [],
+          "mean_work_clamp_stage_py": []
+        }
+      },
+      "checkpoint": {
+        "sha256": "c125ddb75215648731360865803b193b04b98ab1d0544e7dd8d792bebd7c75c2",
+        "area_sum": 1.0,
+        "cohorts": 92,
+        "patches": 2
+      }
+    },
+    "ifx_dev_pilot": {
+      "Y": {
+        "sha256": "107a56797f9f86199e5533420dd962b4dafc742e1c71b2d841aeec54e2b0ed1c",
+        "records": 10,
+        "finite_valid_values": 2142,
+        "diagnostics": {
+          "mean_work_water_nfail_py": [],
+          "mean_work_rk45_rescue_py": [],
+          "mean_work_clamp_stage_py": []
+        }
+      },
+      "M": {
+        "sha256": "ef7e228ec225ef06be000817c14f72a5bb9ea74e90a2493510858c6cb7a23eb6",
+        "records": 120,
+        "finite_valid_values": 25242,
+        "diagnostics": {
+          "mean_work_water_nfail_py": [],
+          "mean_work_rk45_rescue_py": [],
+          "mean_work_clamp_stage_py": []
+        }
+      },
+      "checkpoint": {
+        "sha256": "33e41c46d2d9dc512550ffccaac01b6ffd2c009e608db1cc2a9e983064f5432e",
+        "area_sum": 1.0,
+        "cohorts": 92,
+        "patches": 2
+      }
+    }
+  },
+  "long_run_times_including_plot": {
+    "gfortran_long": {
+      "start_utc": "2026-10-28T17:31:40.603711+00:00",
+      "end_utc": "2026-10-28T19:32:05.877210+00:00",
+      "wall_seconds": 7225.2737757959985,
+      "model_and_plot_exit_code": 0
+    },
+    "ifx_long": {
+      "start_utc": "2026-10-29T15:27:42.247782+00:00",
+      "end_utc": "2026-10-29T17:19:07.538444+00:00",
+      "wall_seconds": 6685.291078340961,
+      "model_and_plot_exit_code": 0
+    }
+  },
+  "reference_table_columns": [
+    "year",
+    "metric",
+    "README_text",
+    "local_value",
+    "local_minus_README",
+    "matches_README_display_precision"
+  ],
+  "reference_table": {
+    "gfortran_long": [
+      [
+        1650,
+        "agb_total",
+        "50.0",
+        49.99256760995697,
+        -0.007432390043028647,
+        true
+      ],
+      [
+        1650,
+        "agb_early",
+        "35.0",
+        34.97935415506819,
+        -0.02064584493181343,
+        true
+      ],
+      [
+        1650,
+        "agb_mid",
+        "14.3",
+        14.341510048015627,
+        0.041510048015625856,
+        true
+      ],
+      [
+        1650,
+        "agb_late",
+        "0.7",
+        0.6717034068731532,
+        -0.028296593126846736,
+        true
+      ],
+      [
+        1650,
+        "basal_area",
+        "23.0",
+        23.037314514268175,
+        0.037314514268175,
+        true
+      ],
+      [
+        1650,
+        "lai",
+        "5.8",
+        5.783903013128475,
+        -0.016096986871525054,
+        true
+      ],
+      [
+        1650,
+        "stems10",
+        "384",
+        383.5063807341281,
+        -0.49361926587192784,
+        true
+      ],
+      [
+        1650,
+        "gpp",
+        "25.8",
+        25.789333007748347,
+        -0.010666992251653795,
+        true
+      ],
+      [
+        1650,
+        "npp",
+        "12.8",
+        12.802875387241148,
+        0.0028753872411471093,
+        true
+      ],
+      [
+        1700,
+        "agb_total",
+        "66.6",
+        66.55808938656733,
+        -0.04191061343266256,
+        true
+      ],
+      [
+        1700,
+        "agb_early",
+        "23.6",
+        23.618936280117694,
+        0.01893628011769266,
+        true
+      ],
+      [
+        1700,
+        "agb_mid",
+        "41.1",
+        41.10519722747392,
+        0.005197227473921373,
+        true
+      ],
+      [
+        1700,
+        "agb_late",
+        "1.8",
+        1.83395587897571,
+        0.03395587897570995,
+        true
+      ],
+      [
+        1700,
+        "basal_area",
+        "24.5",
+        24.495821735440057,
+        -0.004178264559943301,
+        true
+      ],
+      [
+        1700,
+        "lai",
+        "5.7",
+        5.713721453219793,
+        0.013721453219792679,
+        true
+      ],
+      [
+        1700,
+        "stems10",
+        "413",
+        412.7424504796061,
+        -0.25754952039392265,
+        true
+      ],
+      [
+        1700,
+        "gpp",
+        "25.6",
+        25.606991083286136,
+        0.006991083286134625,
+        true
+      ],
+      [
+        1700,
+        "npp",
+        "12.0",
+        12.02200154911749,
+        0.022001549117490526,
+        true
+      ],
+      [
+        1800,
+        "agb_total",
+        "81.8",
+        81.60340507386613,
+        -0.1965949261338693,
+        false
+      ],
+      [
+        1800,
+        "agb_early",
+        "7.5",
+        7.65281549989845,
+        0.1528154998984501,
+        false
+      ],
+      [
+        1800,
+        "agb_mid",
+        "72.1",
+        71.72139272761568,
+        -0.3786072723843148,
+        false
+      ],
+      [
+        1800,
+        "agb_late",
+        "2.2",
+        2.2291968463520013,
+        0.02919684635200115,
+        true
+      ],
+      [
+        1800,
+        "basal_area",
+        "25.9",
+        25.92253384856929,
+        0.022533848569292303,
+        true
+      ],
+      [
+        1800,
+        "lai",
+        "5.8",
+        5.840172650524541,
+        0.040172650524541,
+        true
+      ],
+      [
+        1800,
+        "stems10",
+        "350",
+        370.24701954627307,
+        20.247019546273066,
+        false
+      ],
+      [
+        1800,
+        "gpp",
+        "26.1",
+        26.102158152184597,
+        0.0021581521845952523,
+        true
+      ],
+      [
+        1800,
+        "npp",
+        "12.0",
+        12.015128004805973,
+        0.015128004805973205,
+        true
+      ],
+      [
+        1900,
+        "agb_total",
+        "91.9",
+        92.19544603820147,
+        0.29544603820146165,
+        false
+      ],
+      [
+        1900,
+        "agb_early",
+        "4.3",
+        4.0186983890190415,
+        -0.2813016109809583,
+        false
+      ],
+      [
+        1900,
+        "agb_mid",
+        "84.2",
+        84.639920646754,
+        0.439920646754004,
+        false
+      ],
+      [
+        1900,
+        "agb_late",
+        "3.3",
+        3.536827002428426,
+        0.23682700242842625,
+        false
+      ],
+      [
+        1900,
+        "basal_area",
+        "27.3",
+        27.403237647863474,
+        0.10323764786347311,
+        false
+      ],
+      [
+        1900,
+        "lai",
+        "5.9",
+        5.901844849956868,
+        0.0018448499568677335,
+        true
+      ],
+      [
+        1900,
+        "stems10",
+        "355",
+        367.7324322709165,
+        12.73243227091649,
+        false
+      ],
+      [
+        1900,
+        "gpp",
+        "27.1",
+        27.063446126408465,
+        -0.0365538735915365,
+        true
+      ],
+      [
+        1900,
+        "npp",
+        "12.6",
+        12.570972317776022,
+        -0.02902768222397789,
+        true
+      ],
+      [
+        1950,
+        "agb_total",
+        "102.8",
+        103.35849621625852,
+        0.5584962162585185,
+        false
+      ],
+      [
+        1950,
+        "agb_early",
+        "5.7",
+        4.98219574031904,
+        -0.7178042596809604,
+        false
+      ],
+      [
+        1950,
+        "agb_mid",
+        "94.3",
+        94.85984826982954,
+        0.5598482698295442,
+        false
+      ],
+      [
+        1950,
+        "agb_late",
+        "2.8",
+        3.516452206109932,
+        0.7164522061099321,
+        false
+      ],
+      [
+        1950,
+        "basal_area",
+        "29.5",
+        29.45856421145615,
+        -0.04143578854385055,
+        true
+      ],
+      [
+        1950,
+        "lai",
+        "6.1",
+        6.053212135998937,
+        -0.04678786400106283,
+        true
+      ],
+      [
+        1950,
+        "stems10",
+        "353",
+        345.4072651190989,
+        -7.592734880901105,
+        false
+      ],
+      [
+        1950,
+        "gpp",
+        "28.3",
+        28.222769136687468,
+        -0.0772308633125327,
+        false
+      ],
+      [
+        1950,
+        "npp",
+        "13.3",
+        13.259569680384702,
+        -0.040430319615298416,
+        true
+      ],
+      [
+        2010,
+        "agb_total",
+        "126.9",
+        127.19845958819457,
+        0.29845958819456087,
+        false
+      ],
+      [
+        2010,
+        "agb_early",
+        "16.7",
+        15.391960340399242,
+        -1.308039659600757,
+        false
+      ],
+      [
+        2010,
+        "agb_mid",
+        "107.4",
+        109.05321827069153,
+        1.653218270691525,
+        false
+      ],
+      [
+        2010,
+        "agb_late",
+        "2.7",
+        2.7532809771038,
+        0.05328097710379964,
+        false
+      ],
+      [
+        2010,
+        "basal_area",
+        "34.0",
+        33.96095536509381,
+        -0.03904463490619037,
+        true
+      ],
+      [
+        2010,
+        "lai",
+        "6.3",
+        6.339926718504569,
+        0.03992671850456908,
+        true
+      ],
+      [
+        2010,
+        "stems10",
+        "326",
+        310.2092005349245,
+        -15.790799465075509,
+        false
+      ],
+      [
+        2010,
+        "gpp",
+        "32.6",
+        32.49177131333295,
+        -0.10822868666705432,
+        false
+      ],
+      [
+        2010,
+        "npp",
+        "16.2",
+        16.157035198536242,
+        -0.04296480146375714,
+        true
+      ],
+      [
+        2020,
+        "agb_total",
+        "130.9",
+        131.60103611026514,
+        0.7010361102651359,
+        false
+      ],
+      [
+        2020,
+        "agb_early",
+        "24.3",
+        21.764233422526857,
+        -2.5357665774731437,
+        false
+      ],
+      [
+        2020,
+        "agb_mid",
+        "103.9",
+        107.25255712591915,
+        3.352557125919148,
+        false
+      ],
+      [
+        2020,
+        "agb_late",
+        "2.7",
+        2.5842455618191185,
+        -0.11575443818088171,
+        false
+      ],
+      [
+        2020,
+        "basal_area",
+        "34.8",
+        34.7868521534878,
+        -0.013147846512197248,
+        true
+      ],
+      [
+        2020,
+        "lai",
+        "6.3",
+        6.319929139979074,
+        0.019929139979073973,
+        true
+      ],
+      [
+        2020,
+        "stems10",
+        "302",
+        308.436065269511,
+        6.436065269511005,
+        false
+      ],
+      [
+        2020,
+        "gpp",
+        "34.0",
+        33.944416470495796,
+        -0.05558352950420442,
+        false
+      ],
+      [
+        2020,
+        "npp",
+        "17.2",
+        17.149482769108978,
+        -0.050517230891021114,
+        false
+      ]
+    ],
+    "ifx_long": [
+      [
+        1650,
+        "agb_total",
+        "50.0",
+        49.98464488112103,
+        -0.015355118878972007,
+        true
+      ],
+      [
+        1650,
+        "agb_early",
+        "35.0",
+        34.95819886585641,
+        -0.04180113414358999,
+        true
+      ],
+      [
+        1650,
+        "agb_mid",
+        "14.3",
+        14.355751824717435,
+        0.05575182471743467,
+        false
+      ],
+      [
+        1650,
+        "agb_late",
+        "0.7",
+        0.6706941905471829,
+        -0.029305809452817022,
+        true
+      ],
+      [
+        1650,
+        "basal_area",
+        "23.0",
+        23.031546936556953,
+        0.0315469365569534,
+        true
+      ],
+      [
+        1650,
+        "lai",
+        "5.8",
+        5.783908353734016,
+        -0.01609164626598414,
+        true
+      ],
+      [
+        1650,
+        "stems10",
+        "384",
+        385.83951469934277,
+        1.8395146993427716,
+        false
+      ],
+      [
+        1650,
+        "gpp",
+        "25.8",
+        25.76983251761037,
+        -0.030167482389629185,
+        true
+      ],
+      [
+        1650,
+        "npp",
+        "12.8",
+        12.797694642966864,
+        -0.0023053570331370565,
+        true
+      ],
+      [
+        1700,
+        "agb_total",
+        "66.6",
+        66.62211704484639,
+        0.02211704484639654,
+        true
+      ],
+      [
+        1700,
+        "agb_early",
+        "23.6",
+        23.520515444382227,
+        -0.07948455561777479,
+        false
+      ],
+      [
+        1700,
+        "agb_mid",
+        "41.1",
+        41.247963516827674,
+        0.14796351682767295,
+        false
+      ],
+      [
+        1700,
+        "agb_late",
+        "1.8",
+        1.853638083636497,
+        0.053638083636496914,
+        false
+      ],
+      [
+        1700,
+        "basal_area",
+        "24.5",
+        24.493306622845186,
+        -0.006693377154814328,
+        true
+      ],
+      [
+        1700,
+        "lai",
+        "5.7",
+        5.714915143289339,
+        0.01491514328933885,
+        true
+      ],
+      [
+        1700,
+        "stems10",
+        "413",
+        402.01955237198877,
+        -10.980447628011234,
+        false
+      ],
+      [
+        1700,
+        "gpp",
+        "25.6",
+        25.596509807141917,
+        -0.0034901928580843844,
+        true
+      ],
+      [
+        1700,
+        "npp",
+        "12.0",
+        12.016411410561066,
+        0.016411410561065765,
+        true
+      ],
+      [
+        1800,
+        "agb_total",
+        "81.8",
+        81.83752580036222,
+        0.037525800362217865,
+        true
+      ],
+      [
+        1800,
+        "agb_early",
+        "7.5",
+        7.124935529169571,
+        -0.37506447083042893,
+        false
+      ],
+      [
+        1800,
+        "agb_mid",
+        "72.1",
+        72.34398600680676,
+        0.24398600680676452,
+        false
+      ],
+      [
+        1800,
+        "agb_late",
+        "2.2",
+        2.3686042643858793,
+        0.16860426438587917,
+        false
+      ],
+      [
+        1800,
+        "basal_area",
+        "25.9",
+        25.959894428877046,
+        0.059894428877047545,
+        false
+      ],
+      [
+        1800,
+        "lai",
+        "5.8",
+        5.843289353999844,
+        0.04328935399984424,
+        true
+      ],
+      [
+        1800,
+        "stems10",
+        "350",
+        359.38791110137316,
+        9.387911101373163,
+        false
+      ],
+      [
+        1800,
+        "gpp",
+        "26.1",
+        26.055766043564688,
+        -0.04423395643531336,
+        true
+      ],
+      [
+        1800,
+        "npp",
+        "12.0",
+        11.996297345722029,
+        -0.003702654277971007,
+        true
+      ],
+      [
+        1900,
+        "agb_total",
+        "91.9",
+        92.01815385173823,
+        0.1181538517382279,
+        false
+      ],
+      [
+        1900,
+        "agb_early",
+        "4.3",
+        3.8343698746266974,
+        -0.4656301253733024,
+        false
+      ],
+      [
+        1900,
+        "agb_mid",
+        "84.2",
+        84.72908899337627,
+        0.5290889933762628,
+        false
+      ],
+      [
+        1900,
+        "agb_late",
+        "3.3",
+        3.454694983735262,
+        0.15469498373526225,
+        false
+      ],
+      [
+        1900,
+        "basal_area",
+        "27.3",
+        27.295383298032345,
+        -0.004616701967655956,
+        true
+      ],
+      [
+        1900,
+        "lai",
+        "5.9",
+        5.887922642490007,
+        -0.012077357509993725,
+        true
+      ],
+      [
+        1900,
+        "stems10",
+        "355",
+        345.58665965798383,
+        -9.41334034201617,
+        false
+      ],
+      [
+        1900,
+        "gpp",
+        "27.1",
+        27.022547206116244,
+        -0.07745279388375792,
+        false
+      ],
+      [
+        1900,
+        "npp",
+        "12.6",
+        12.556895198538285,
+        -0.04310480146171436,
+        true
+      ],
+      [
+        1950,
+        "agb_total",
+        "102.8",
+        102.53485920412798,
+        -0.2651407958720142,
+        false
+      ],
+      [
+        1950,
+        "agb_early",
+        "5.7",
+        7.198322209736666,
+        1.4983222097366662,
+        false
+      ],
+      [
+        1950,
+        "agb_mid",
+        "94.3",
+        92.16357889209442,
+        -2.1364211079055764,
+        false
+      ],
+      [
+        1950,
+        "agb_late",
+        "2.8",
+        3.1729581022969082,
+        0.3729581022969084,
+        false
+      ],
+      [
+        1950,
+        "basal_area",
+        "29.5",
+        29.473227757373223,
+        -0.026772242626776688,
+        true
+      ],
+      [
+        1950,
+        "lai",
+        "6.1",
+        6.075055636336035,
+        -0.024944363663964353,
+        true
+      ],
+      [
+        1950,
+        "stems10",
+        "353",
+        342.99641465242456,
+        -10.003585347575438,
+        false
+      ],
+      [
+        1950,
+        "gpp",
+        "28.3",
+        28.210975209679738,
+        -0.08902479032026278,
+        false
+      ],
+      [
+        1950,
+        "npp",
+        "13.3",
+        13.248865264178795,
+        -0.05113473582120598,
+        false
+      ],
+      [
+        2010,
+        "agb_total",
+        "126.9",
+        126.11302422775317,
+        -0.7869757722468336,
+        false
+      ],
+      [
+        2010,
+        "agb_early",
+        "16.7",
+        18.341708221914963,
+        1.6417082219149641,
+        false
+      ],
+      [
+        2010,
+        "agb_mid",
+        "107.4",
+        105.17203944013404,
+        -2.227960559865963,
+        false
+      ],
+      [
+        2010,
+        "agb_late",
+        "2.7",
+        2.5992765657041534,
+        -0.10072343429584674,
+        false
+      ],
+      [
+        2010,
+        "basal_area",
+        "34.0",
+        33.93594333005368,
+        -0.06405666994631787,
+        false
+      ],
+      [
+        2010,
+        "lai",
+        "6.3",
+        6.318313389868585,
+        0.01831338986858544,
+        true
+      ],
+      [
+        2010,
+        "stems10",
+        "326",
+        321.14823068178526,
+        -4.8517693182147354,
+        false
+      ],
+      [
+        2010,
+        "gpp",
+        "32.6",
+        32.48503868017659,
+        -0.11496131982341495,
+        false
+      ],
+      [
+        2010,
+        "npp",
+        "16.2",
+        16.16554006118838,
+        -0.034459938811618684,
+        true
+      ],
+      [
+        2020,
+        "agb_total",
+        "130.9",
+        130.68667050506872,
+        -0.21332949493128694,
+        false
+      ],
+      [
+        2020,
+        "agb_early",
+        "24.3",
+        24.966041483841135,
+        0.6660414838411342,
+        false
+      ],
+      [
+        2020,
+        "agb_mid",
+        "103.9",
+        103.25749647680232,
+        -0.6425035231976892,
+        false
+      ],
+      [
+        2020,
+        "agb_late",
+        "2.7",
+        2.4631325444252616,
+        -0.23686745557473854,
+        false
+      ],
+      [
+        2020,
+        "basal_area",
+        "34.8",
+        34.79299109479403,
+        -0.007008905205964311,
+        true
+      ],
+      [
+        2020,
+        "lai",
+        "6.3",
+        6.303971269568969,
+        0.0039712695689688715,
+        true
+      ],
+      [
+        2020,
+        "stems10",
+        "302",
+        303.51398247629265,
+        1.5139824762926537,
+        false
+      ],
+      [
+        2020,
+        "gpp",
+        "34.0",
+        33.970596304754,
+        -0.02940369524600328,
+        true
+      ],
+      [
+        2020,
+        "npp",
+        "17.2",
+        17.158996764475386,
+        -0.041003235524613046,
+        true
+      ]
+    ]
+  },
+  "pilot_1609_annual_metrics": {
+    "gfortran_dev": {
+      "build": "gfortran_dev",
+      "year": 1609,
+      "agb_MgC_ha": 18.436445856983593,
+      "lai": 6.9801073137202385,
+      "stems_ge10_ha": 0.0,
+      "gpp_MgC_ha_yr": 27.516048268019226,
+      "npp_MgC_ha_yr": 15.75671021831881,
+      "agb_pft1_MgC_ha": 12.483767681486281,
+      "agb_pft2_MgC_ha": 5.341633253375836,
+      "agb_pft3_MgC_ha": 0.6110449221214763
+    },
+    "ifx_dev": {
+      "build": "ifx_dev",
+      "year": 1609,
+      "agb_MgC_ha": 18.428289224721432,
+      "lai": 6.981466204438968,
+      "stems_ge10_ha": 0.0,
+      "gpp_MgC_ha_yr": 27.516647261009474,
+      "npp_MgC_ha_yr": 15.75541089458416,
+      "agb_pft1_MgC_ha": 12.518616056882365,
+      "agb_pft2_MgC_ha": 5.298529470132637,
+      "agb_pft3_MgC_ha": 0.6111436977064316
+    },
+    "ifx_production": {
+      "build": "ifx_production",
+      "year": 1609,
+      "agb_MgC_ha": 18.42828660982481,
+      "lai": 6.981468119064299,
+      "stems_ge10_ha": 0.0,
+      "gpp_MgC_ha_yr": 27.516651955255345,
+      "npp_MgC_ha_yr": 15.75541283736931,
+      "agb_pft1_MgC_ha": 12.518657477142668,
+      "agb_pft2_MgC_ha": 5.298486788221205,
+      "agb_pft3_MgC_ha": 0.6111423444609375
+    }
+  },
+  "pilot_checkpoint_cohorts": {
+    "gfortran_dev": 94,
+    "ifx_dev": 92,
+    "ifx_production": 92
+  },
+  "limitations": [
+    "Local production uses host CPU target; author exact compiler flags/CPU target unknown.",
+    "Local 8 threads versus README timing on 20; no new thread-count experiment.",
+    "Local forcing is the documented ARCO-derived file; author actual forcing file has not been compared.",
+    "Local experiment remains f49; current beta output changes are not applied.",
+    "July 1921 water-solver diagnostic remains; independent full coupled budget closure not done.",
+    "Ten-year ifx dev versus production agreement in major metrics is not a full 421-year dev comparison or bitwise identity.",
+    "Displayed-precision matches are not an ecological accuracy score.",
+    "Production CTest was disabled; earlier independent dev builds passed 95/95 registered tests for each compiler. No new CTest run for this documentation update."
+  ]
+}
