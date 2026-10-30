@@ -70,7 +70,3 @@ These small derived tables are documentation of measured results. Native output,
 and census downloads, executables and machine-specific run directories are not committed.
 This is a reviewable evidence summary, not a self-contained full-run reproduction package.
 The archived full local review bundle is identified by hash in provenance.json.
-
-AI assistance: Codex assisted with setup, execution, source inspection, numerical analysis,
-evidence checks and writing. The repository owner authorized this evidence branch; the proposed
-community comment remains a separate, unpublished draft for human review.
