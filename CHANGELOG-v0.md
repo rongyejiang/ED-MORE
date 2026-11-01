@@ -72,7 +72,9 @@ This file covers every 0.x release; version 1.0 starts `CHANGELOG-v1.md`. The fo
   `mean_veg_surface_evap_pa`, `mean_ground_evap_pa`, `mean_dew_pa`, `mean_resid_energy_pa` and
   `mean_resid_water_pa`. (#60)
 - An example of site heterogeneity compares BCI sites with an area-equivalent environment,
-  reconstructs site stands from patch and cohort output, and evaluates soil-depth sensitivity.
+  reconstructs continuous site stands from patch and cohort output, and evaluates soil-depth
+  sensitivity. The example includes spatial and retention evidence, paired historical trajectories,
+  an hourly restart comparison, and instructions for obtaining the original data.
 
 
 ### Changed

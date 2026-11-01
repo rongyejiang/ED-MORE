@@ -1,0 +1,14 @@
+# SPDX-License-Identifier: Apache-2.0
+# Hourly polygon fluxes and site soil profiles for the common-restart process window.
+[variables]
+"*" = false
+mean_gpp_py = "F D"
+mean_et_py = "F D"
+mean_transp_py = "F D"
+mean_precip_py = "F D"
+mean_sw_in_py = "F D"
+mean_soil_water_layer_si = "F D"
+mean_soil_psi_layer_si = "F D"
+mean_soil_temp_layer_si = "F D"
+"mean_resid_*_py" = "D"
+"mean_work_*_py" = "D"

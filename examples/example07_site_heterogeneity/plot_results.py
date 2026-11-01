@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import BoundaryNorm, ListedColormap
 from matplotlib.patches import Patch
 from matplotlib.lines import Line2D
+import matplotlib.dates as mdates
 import numpy as np
 import pandas as pd
 
@@ -77,6 +78,13 @@ def save(fig, name):
         "01_site_stands": "overview.png",
         "07_site_responses": "site_responses.png",
         "08_site_composition": "site_composition.png",
+        "09_spatial_design": "spatial_design.png",
+        "10_retention_evidence": "retention_evidence.png",
+        "11_stand_trajectories": "stand_trajectories.png",
+        "12_environment_responses": "environment_responses.png",
+        "13_sensitivity": "sensitivity.png",
+        "14_hourly_processes": "hourly_processes.png",
+        "15_polygon_trajectories": "polygon_trajectories.png",
     }
     if name in previews:
         # Compact README previews; full-resolution and vector exports stay in figures/.
@@ -519,6 +527,440 @@ def site_composition():
     save(fig, "08_site_composition")
 
 
+def site_legend(fig, axes):
+    """Keep the site key outside the data panels."""
+    handles = [Line2D([], [], color=c, lw=2, label=n) for c, n in zip(COLORS, NAMES)]
+    fig.legend(
+        handles=handles, loc="outside lower center", ncol=4, frameon=False, fontsize=8
+    )
+    for ax in np.asarray(axes).flat:
+        ax.tick_params(axis="x", labelsize=8)
+
+
+def spatial_design():
+    q = pd.read_csv(HERE / "data/quadrat_assignment.csv")
+    sites = json.loads((HERE / "data/sites.json").read_text())
+    stand = (
+        pd.read_csv(HERE / "data/initial_stand_by_site_pft.csv")
+        .pivot(index="site_id", columns="pft", values="basal_area_m2")
+        .reindex(range(1, 9))
+    )
+    shares = stand.div(stand.sum(axis=1), axis=0) * 100
+    fig, axes = plt.subplots(2, 2, figsize=(12.6, 7.8), layout="constrained")
+    for ax, key, cmap, norm, title in [
+        (axes[0, 0], "elevation", "terrain", None, "a  Quadrat mean elevation"),
+        (
+            axes[0, 1],
+            "site_id",
+            ListedColormap(COLORS),
+            BoundaryNorm(np.arange(0.5, 9.5), 8),
+            "b  Environmental groups",
+        ),
+    ]:
+        mesh = ax.pcolormesh(
+            np.arange(0, 1020, 20),
+            np.arange(0, 520, 20),
+            q.pivot(index="y", columns="x", values=key),
+            cmap=cmap,
+            norm=norm,
+        )
+        ax.set(
+            aspect="equal",
+            xlim=(0, 1000),
+            ylim=(0, 500),
+            xlabel="Plot x (m)",
+            ylabel="Plot y (m)",
+        )
+        ax.set_title(title, loc="left")
+        if key == "elevation":
+            fig.colorbar(mesh, ax=ax, label="Elevation (m)", shrink=0.8)
+    axes[1, 0].barh(NAMES, [s["area_ha"] for s in sites], color=COLORS)
+    axes[1, 0].set(xlabel="Area (ha)")
+    axes[1, 0].set_title("c  Site areas", loc="left")
+    left = np.zeros(8)
+    for pft, color, label in zip(range(1, 4), PFT_COLORS, ["Low", "Mid", "High"]):
+        values = shares[pft].to_numpy()
+        axes[1, 1].barh(
+            NAMES,
+            values,
+            left=left,
+            color=color,
+            label=label,
+            edgecolor="black",
+            linewidth=0.3,
+        )
+        left += values
+    axes[1, 1].set(xlim=(0, 100), xlabel="Share of initial basal area (%)")
+    axes[1, 1].set_title("d  Initial forest composition", loc="left")
+    for ax in axes[1]:
+        ax.invert_yaxis()
+    axes[1, 1].legend(
+        title="Wood-density PFT",
+        frameon=False,
+        ncol=3,
+        loc="upper center",
+        bbox_to_anchor=(0.5, -0.18),
+        fontsize=8,
+    )
+    save(fig, "09_spatial_design")
+
+
+def retention_evidence():
+    from prepare_input import theta
+
+    ret = pd.read_csv(HERE / "data/retention_labeled.csv")
+    fits = pd.read_csv(HERE / "data/retention_fits.csv")
+    storage = pd.read_csv(HERE / "data/equivalent_storage.csv")
+    sites = json.loads((HERE / "data/sites.json").read_text())
+    eq = json.loads((HERE / "data/equivalent_environment.json").read_text())
+    fig, axes = plt.subplots(2, 3, figsize=(12.6, 7.2), layout="constrained")
+    psi = -np.geomspace(0.01, 12, 200)
+    for i, (ax, soil) in enumerate(
+        zip(axes.flat, ["AVA", "Marron", "Fairchild", "Swamp"])
+    ):
+        g = ret[(ret.soiltype == soil) & (ret.swp < 0)]
+        ax.scatter(
+            -g.swp,
+            g.swc * 0.009,
+            s=9,
+            color="#597888",
+            alpha=0.55,
+            label="Laboratory data at 0.9 g cm⁻³",
+        )
+        curves = []
+        for row in fits[fits.soil == soil].itertuples():
+            curve = theta(psi, row.alpha, row.n)
+            curves.append(curve)
+            if np.isclose(row.bulk_density_assumed, 0.9):
+                ax.plot(-psi, curve, color="#b34d3c", label="Fit at 0.9 g cm⁻³")
+        ax.fill_between(
+            -psi,
+            np.min(curves, axis=0),
+            np.max(curves, axis=0),
+            color="#b34d3c",
+            alpha=0.12,
+            label="Fits at 0.8–1.0 g cm⁻³",
+        )
+        ax.set(
+            xscale="log",
+            ylim=(0.1, 0.6),
+            xlabel="Suction (MPa)",
+            ylabel=r"Water content (m$^3$ m$^{-3}$)",
+        )
+        ax.set_title(
+            f"{chr(97 + i)}  {soil}: {g.site.nunique()} sampling locations", loc="left"
+        )
+    axes[0, 0].legend(frameon=False, fontsize=6.5, loc="upper right")
+    ax = axes[1, 1]
+    ax.plot(
+        -storage.psi_MPa,
+        storage.target_storage_mm,
+        color=COLORS[6],
+        label="Area-weighted sites",
+    )
+    ax.plot(
+        -storage.psi_MPa,
+        storage.equivalent_storage_mm,
+        "--",
+        color=COLORS[2],
+        label="Equivalent column",
+    )
+    ax.set(xscale="log", xlabel="Suction (MPa)", ylabel="Water storage (mm)")
+    ax.set_title("e  Equivalent water storage", loc="left")
+    ax.legend(frameon=False, fontsize=8)
+    ax = axes[1, 2]
+    ax.barh(NAMES, [s["depth"] for s in sites], color=COLORS)
+    ax.axvline(eq["depth"], color="black", ls="--", lw=0.8, label="Equivalent depth")
+    ax.invert_yaxis()
+    ax.set_xlabel("Represented depth (m)")
+    ax.set_title("f  Prescribed profile depths", loc="left")
+    ax.legend(
+        frameon=False, fontsize=8, loc="upper center", bbox_to_anchor=(0.5, -0.18)
+    )
+    save(fig, "10_retention_evidence")
+
+
+def stand_trajectories():
+    frames = [
+        pd.read_csv(
+            HERE / f"results/{label}_site_stand_monthly.csv", parse_dates=["date"]
+        ).query("dbh_min_cm == 0")
+        for label in ("A", "B")
+    ]
+    pair = frames[0].merge(
+        frames[1],
+        on=["date", "site", "dbh_min_cm"],
+        suffixes=("_a", "_b"),
+        validate="one_to_one",
+    )
+    assert len(pair) == len(frames[0]) == len(frames[1])
+    for metric in ("agb_kgC_m2", "lai"):
+        pair[metric + "_difference"] = pair[metric + "_a"] - pair[metric + "_b"]
+    pair.to_csv(HERE / "results/AB_site_stand_monthly.csv", index=False)
+    fig, axes = plt.subplots(
+        3, 2, figsize=(12.6, 9.4), layout="constrained", sharex=True
+    )
+    for col, (key, scale, label) in enumerate(
+        [
+            ("agb_kgC_m2", 10, r"AGB (Mg C ha$^{-1}$)"),
+            ("lai", 1, r"LAI (m$^2$ m$^{-2}$)"),
+        ]
+    ):
+        for sid, color in enumerate(COLORS, 1):
+            g = pair[pair.site == sid].sort_values("date")
+            for row, suffix in enumerate(("_a", "_b", "_difference")):
+                axes[row, col].plot(
+                    g.date, g[key + suffix] * scale, color=color, lw=1.1
+                )
+        low = min(ax.get_ylim()[0] for ax in axes[:2, col])
+        high = max(ax.get_ylim()[1] for ax in axes[:2, col])
+        for ax in axes[:2, col]:
+            ax.set_ylim(low, high)
+        axes[2, col].axhline(0, color="black", ls="--", lw=0.6)
+        for row, design in enumerate(
+            ("A: heterogeneous", "B: equivalent environment", "A − B")
+        ):
+            ax = axes[row, col]
+            ax.set_ylabel(("Difference in " if row == 2 else "") + label)
+            ax.set_title(f"{chr(97 + 2 * row + col)}  {design}", loc="left")
+            ax.xaxis.set_major_locator(mdates.YearLocator(2))
+            ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
+            ax.set_xlim(pair.date.min(), pair.date.max())
+    site_legend(fig, axes)
+    save(fig, "11_stand_trajectories")
+
+
+def environment_responses():
+    daily = pd.read_csv(HERE / "results/daily_sites.csv.gz", parse_dates=["date"])
+    summary = pd.read_csv(HERE / "results/AB_site_summary.csv").set_index("site_id")
+    fig, axes = plt.subplots(2, 2, figsize=(12.6, 7.7), layout="constrained")
+    for ax, scenario, title in zip(
+        axes[0], SCENARIOS[:2], ["a  A: heterogeneous", "b  B: equivalent environment"]
+    ):
+        data = daily[
+            (daily.scenario == scenario)
+            & daily.date.between("2015-01-01", "2016-06-01")
+        ]
+        for sid, color in enumerate(COLORS, 1):
+            g = data[data.site_id == sid].set_index("date").sort_index()
+            ax.plot(
+                g.index,
+                g.psi_15cm.rolling(7, min_periods=1).mean(),
+                color=color,
+                lw=1.2,
+            )
+        ax.set_title(title, loc="left")
+        ax.set_ylabel("Water potential at 0.15 m (MPa)")
+        ax.xaxis.set_major_locator(mdates.MonthLocator(interval=4))
+        ax.xaxis.set_major_formatter(mdates.DateFormatter("%b %Y"))
+    low = min(ax.get_ylim()[0] for ax in axes[0])
+    high = max(ax.get_ylim()[1] for ax in axes[0])
+    for ax in axes[0]:
+        ax.set_ylim(low, high)
+    for ax, key, factor, title, label in [
+        (
+            axes[1, 0],
+            "gpp_umol",
+            86400 * 12e-6,
+            "c  GPP: A − B",
+            r"GPP difference (g C m$^{-2}$ d$^{-1}$)",
+        ),
+        (
+            axes[1, 1],
+            "et_mm_day",
+            1,
+            "d  Evapotranspiration: A − B",
+            r"ET difference (mm d$^{-1}$)",
+        ),
+    ]:
+        delta = summary[key + "_difference"].reindex(range(1, 9)) * factor
+        ax.barh(NAMES, delta, color=COLORS)
+        ax.invert_yaxis()
+        ax.axvline(0, color="black", lw=0.6)
+        ax.set_xlabel(label)
+        ax.set_title(title, loc="left")
+    site_legend(fig, axes)
+    save(fig, "12_environment_responses")
+
+
+def sensitivity():
+    annual = pd.read_csv(HERE / "results/annual_metrics.csv").query("year >= 2012")
+    mean = annual.groupby("scenario").mean(numeric_only=True)
+    pairs = [
+        ("S_wetland_aquifer", SCENARIOS[0], "Swamp basal aquifer / A"),
+        ("S_no_cue", SCENARIOS[0], "No phenology cues / A"),
+        ("S_single_patch_budget", SCENARIOS[2], "Patch target 200 / C"),
+        ("S_equal_depth", SCENARIOS[0], "Equal site depths / A"),
+    ]
+    available = [pair for pair in pairs if pair[0] in mean.index]
+    if not available:
+        return
+    fig, axes = plt.subplots(1, 4, figsize=(12.6, 4), layout="constrained", sharey=True)
+    records = []
+    for panel, (ax, key, title) in enumerate(
+        zip(
+            axes,
+            ["gpp_kgC_m2_yr", "et_mm_yr", "agb_mean_kgC_m2", "lai_mean"],
+            ["GPP", "ET", "AGB", "LAI"],
+        )
+    ):
+        delta = []
+        for run, reference, _ in available:
+            value = 100 * (mean.at[run, key] / mean.at[reference, key] - 1)
+            delta.append(value)
+            records.append(
+                dict(
+                    scenario=run,
+                    reference=reference,
+                    metric=key,
+                    relative_percent=value,
+                )
+            )
+        ax.barh(
+            range(len(available)),
+            delta,
+            color=[COLORS[6], COLORS[4], COLORS[5], COLORS[2]][: len(available)],
+        )
+        ax.axvline(0, color="black", lw=0.6)
+        ax.set(
+            yticks=range(len(available)),
+            yticklabels=[p[2] for p in available],
+            xlabel="Change from reference (%)",
+        )
+        ax.set_title(f"{chr(97 + panel)}  {title}", loc="left")
+        low, high = min(delta + [0]), max(delta + [0])
+        span = max(high - low, 0.05)
+        ax.set_xlim(low - 0.42 * span, high + 0.42 * span)
+        for row, value in enumerate(delta):
+            ax.annotate(
+                "<0.001" if abs(value) < 0.0005 else f"{value:+.3f}",
+                (value, row),
+                xytext=(4 if value >= 0 else -4, 0),
+                textcoords="offset points",
+                ha="left" if value >= 0 else "right",
+                va="center",
+                fontsize=7,
+            )
+    axes[0].invert_yaxis()
+    pd.DataFrame(records).to_csv(HERE / "results/sensitivity_summary.csv", index=False)
+    save(fig, "13_sensitivity")
+
+
+def hourly_processes():
+    path = HERE / "results/hourly_window.csv"
+    if not path.exists():
+        print(
+            "Hourly figure requires analyze_hourly.py after the optional process-window runs."
+        )
+        return
+    data = pd.read_csv(path, parse_dates=["date"])
+    a, b = [data[data.dt_seconds == dt].sort_values("date") for dt in (300, 150)]
+    assert np.array_equal(a.date.to_numpy(), b.date.to_numpy()) and not a.empty
+    fig, axes = plt.subplots(3, 2, figsize=(12.6, 9), layout="constrained", sharex=True)
+    axes[0, 0].bar(a.date, a.precip_mm_hour, width=1 / 24, color=COLORS[6])
+    axes[0, 1].plot(a.date, a.sw_W_m2, color=COLORS[2], lw=0.9)
+    for ax, key in [(axes[1, 0], "gpp_umol"), (axes[1, 1], "et_mm_hour")]:
+        ax.plot(a.date, a[key], color=COLORS[0], lw=1.1, label="300 s step")
+        ax.plot(b.date, b[key], color=COLORS[4], ls="--", lw=0.9, label="150 s step")
+    axes[1, 0].legend(frameon=False, fontsize=8)
+    for sid, color in enumerate(COLORS, 1):
+        axes[2, 0].plot(a.date, a[f"psi_15cm_site{sid}"], color=color, lw=1.1)
+        axes[2, 1].plot(a.date, a[f"temp_15cm_site{sid}"] - 273.15, color=color, lw=1.1)
+    for ax, title, label in zip(
+        axes.flat,
+        [
+            "a  Precipitation",
+            "b  Incoming shortwave",
+            "c  Polygon GPP",
+            "d  Polygon evapotranspiration",
+            "e  Site water potential at 0.15 m",
+            "f  Site temperature at 0.15 m",
+        ],
+        [
+            r"Precipitation (mm h$^{-1}$)",
+            r"Shortwave (W m$^{-2}$)",
+            r"GPP (µmol CO$_2$ m$^{-2}$ s$^{-1}$)",
+            r"ET (mm h$^{-1}$)",
+            "Water potential (MPa)",
+            "Temperature (°C)",
+        ],
+    ):
+        ax.set_title(title, loc="left")
+        ax.set_ylabel(label)
+        ax.xaxis.set_major_locator(mdates.DayLocator(interval=2))
+        ax.xaxis.set_major_formatter(mdates.DateFormatter("%d %b"))
+        ax.set_xlim(a.date.min(), a.date.max())
+    for ax in axes[-1]:
+        ax.set_xlabel("Date (UTC)")
+    site_legend(fig, axes)
+    save(fig, "14_hourly_processes")
+
+
+def polygon_trajectories():
+    daily = pd.read_csv(HERE / "results/daily_polygon.csv.gz", parse_dates=["date"])
+    daily = daily[daily.scenario.isin(SCENARIOS)]
+    keys = ["mean_gpp_py", "mean_et_py", "mean_agb_py", "mean_lai_py"]
+    monthly = (
+        daily.set_index("date")
+        .groupby("scenario")[keys]
+        .resample("MS")
+        .mean()
+        .reset_index()
+    )
+    monthly.to_csv(HERE / "results/polygon_monthly.csv", index=False)
+    fig, axes = plt.subplots(
+        4, 2, figsize=(12.6, 10), layout="constrained", sharex=True
+    )
+    for row, (key, scale, label) in enumerate(
+        zip(
+            keys,
+            [86400 * 12e-6, 86400, 10, 1],
+            [
+                r"GPP (g C m$^{-2}$ d$^{-1}$)",
+                r"ET (mm d$^{-1}$)",
+                r"AGB (Mg C ha$^{-1}$)",
+                r"LAI (m$^2$ m$^{-2}$)",
+            ],
+        )
+    ):
+        by_run = []
+        for scenario, color, linestyle, label_run in zip(
+            SCENARIOS,
+            [COLORS[0], COLORS[6], COLORS[2]],
+            ["-", "--", ":"],
+            [
+                "A: heterogeneous",
+                "B: equivalent, multiple sites",
+                "C: equivalent, one site",
+            ],
+        ):
+            group = monthly[monthly.scenario == scenario].set_index("date")[key] * scale
+            by_run.append(group)
+            axes[row, 0].plot(
+                group.index, group, color=color, ls=linestyle, lw=1.2, label=label_run
+            )
+        for difference, color, label_delta in [
+            (by_run[0] - by_run[1], COLORS[0], "A − B"),
+            (by_run[1] - by_run[2], COLORS[5], "B − C"),
+            (by_run[0] - by_run[2], COLORS[4], "A − C"),
+        ]:
+            axes[row, 1].plot(
+                difference.index, difference, color=color, lw=1.1, label=label_delta
+            )
+        axes[row, 1].axhline(0, color="black", ls="--", lw=0.6)
+        axes[row, 0].set_ylabel(label)
+        axes[row, 1].set_ylabel("Difference in " + label)
+        for col, title in enumerate(("Polygon trajectories", "Paired differences")):
+            ax = axes[row, col]
+            ax.set_title(f"{chr(97 + 2 * row + col)}  {title}", loc="left")
+            ax.xaxis.set_major_locator(mdates.YearLocator(2))
+            ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
+            ax.set_xlim(monthly.date.min(), monthly.date.max())
+    axes[0, 0].legend(frameon=False, fontsize=7, ncol=1)
+    axes[0, 1].legend(frameon=False, fontsize=8, ncol=3)
+    save(fig, "15_polygon_trajectories")
+
+
 def report(update_readme=False):
     """Write numerical results and captions from the same tables as the figures."""
     annual = pd.read_csv(HERE / "results/annual_metrics.csv").query("year >= 2012")
@@ -662,7 +1104,68 @@ def report(update_readme=False):
             "All modeled cohorts are included; each site's three differences sum to zero.",
         ),
     ]
-    for number, (stem, caption) in enumerate(captions, 1):
+    captions += [
+        (
+            "09_spatial_design",
+            "Spatial design and initial forest. Elevation is the quadrat mean "
+            "derived from the survey grid. The same quadrat grouping supplies exact site areas and "
+            "the observed initial forest in A and B. PFT fractions use the selected-diameter basal "
+            "area of the initialization, not simulated biomass.",
+        ),
+        (
+            "10_retention_evidence",
+            "Soil-retention evidence and profile construction. Points convert "
+            "laboratory gravimetric water content using an assumed bulk density of 0.9 g cm⁻³. "
+            "The line is the van Genuchten fit at that density; shading spans fits at 0.8–1.0 g cm⁻³ "
+            "and is not a confidence interval. Storage equivalence uses the prescribed profile depths.",
+        ),
+        (
+            "11_stand_trajectories",
+            "Continuous monthly site AGB and LAI for A and B, with paired "
+            "absolute differences. All cohorts are reconstructed from monthly states and patch areas. "
+            "A and B use identical site forests at initialization. Matching absolute axes permit "
+            "cross-design comparison; the difference panels resolve smaller environmental responses. "
+            "The adjustment year is displayed, but excluded from the period-mean statistics.",
+        ),
+        (
+            "12_environment_responses",
+            "Site water-potential trajectories under A and B use a common "
+            "vertical scale and trailing seven-day means. The lower panels give the absolute mean "
+            "daily GPP and ET differences over 2012–2017. Site colors follow the spatial design.",
+        ),
+        (
+            "13_sensitivity",
+            "Sensitivity of period-mean polygon GPP, ET, AGB and LAI. Each row names "
+            "its reference: A for the aquifer, phenology-cue and depth scenarios, C for the larger "
+            "single-site patch budget. Values are 100 × (scenario/reference − 1), using 2012–2017. "
+            "These are individual scenario contrasts, not additive contributions or uncertainty bounds.",
+        ),
+    ]
+    if (HERE / "results/hourly_window.csv").exists():
+        captions.append(
+            (
+                "14_hourly_processes",
+                "Hourly processes during 20–30 April 2016 (UTC). "
+                "The two A runs restart from the same 20 April state and use outer steps "
+                "of 300 and 150 s, with identical hourly averaging intervals. GPP and ET "
+                "are polygon means; water potential and temperature are site means "
+                "interpolated to 0.15 m, shown for the 300 s run. Precipitation and incoming "
+                "shortwave are the ERA5-Land forcing. This window illustrates transient "
+                "processes and step refinement; it is not the period used for the main results.",
+            )
+        )
+    captions.append(
+        (
+            "15_polygon_trajectories",
+            "Continuous polygon comparison over the historical "
+            "run. Left panels show monthly means of daily GPP, ET, AGB and LAI for A, B and C. "
+            "Right panels show their absolute differences. GPP and ET are mean daily rates "
+            "within each month, not monthly totals. The adjustment year is included here; "
+            "period-mean contrasts exclude it.",
+        )
+    )
+    for stem, caption in captions:
+        number = int(stem[:2])
         lines += [
             f"## Figure {number}",
             "",
@@ -747,4 +1250,11 @@ if __name__ == "__main__":
     seasonal_profiles()
     site_responses()
     site_composition()
+    spatial_design()
+    retention_evidence()
+    stand_trajectories()
+    environment_responses()
+    sensitivity()
+    hourly_processes()
+    polygon_trajectories()
     report(args.update_readme)

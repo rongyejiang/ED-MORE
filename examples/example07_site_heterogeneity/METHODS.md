@@ -23,6 +23,14 @@ records are used as diagnostics, rather than targets for selecting these paramet
 
 ## Spatial assignment
 
+![Elevation, environmental groups, site areas and initial forest composition](spatial_design.png)
+
+The elevation panel shows quadrat means derived from the survey grid. The grouping covers the
+complete plot, and its area fractions supply the polygon aggregation weights. The composition
+panel uses each site's observed initial basal area, calculated from the selected diameter of
+each eligible tree. Colors denote the same sites and wood-density PFTs throughout the example.
+The source files and acquisition steps are listed in [Data sources and access](README.md#data-sources-and-access).
+
 The elevation grid and tree tables are from the [2019 BCI census archive](https://doi.org/10.15146/5xcp-0d46).
 The habitat classification follows [Harms et al. (2001)](https://doi.org/10.1111/j.1365-2745.2001.00615.x),
 using the observed table pinned in `sources.json`. The soil map is distributed with
@@ -45,6 +53,13 @@ in the surface-normal average; a group's representative slope need not equal the
 quadrat classification slopes. No flow direction or contributing area is derived from the grid.
 
 ## Soil profiles and equivalence
+
+![Laboratory retention measurements, density-dependent fits and equivalent soil storage](retention_evidence.png)
+
+Laboratory points are shown with the fit at the assumed bulk density and an envelope spanning
+the alternative density fits. This envelope represents the density assumptions, not a statistical
+confidence interval. The lower panels connect the fitted retention to storage equivalence and
+the prescribed profile depths.
 
 The [retention dataset](https://doi.org/10.5061/dryad.1023m1d) provides laboratory water content and
 potential at mapped sampling locations. Gravimetric water content is converted to volumetric
@@ -144,6 +159,12 @@ rooting and canopy responses determine whether its fluxes match the heterogeneou
 
 ## Stand aggregation and diagnostics
 
+Monthly AGB and LAI trajectories are the primary stand comparison. The full historical period
+shows the adjustment, seasonal variation and divergence between A and B; period statistics use
+the years after adjustment. Common-date comparisons give the magnitude and composition of the
+stand at a specified time. Monthly polygon flux curves are means of the daily rates within each
+month, whereas annual flux totals integrate those rates over their time bounds.
+
 For within-site patch fraction bᵢⱼ, cohort abundance nᵢⱼₖ and per-plant biomass Bᵢⱼₖ,
 site AGB is Σⱼ bᵢⱼ Σₖ nᵢⱼₖ Bᵢⱼₖ. LAI uses per-plant leaf area in place of biomass.
 PFT composition is each PFT's contribution divided by site AGB. These are reconstructed from
@@ -171,3 +192,13 @@ report percentage points. Both simulations are reconstructed from patch and coho
 checked against their polygon AGB, LAI, density and basal area. The model-wide comparisons include
 all cohorts; the census comparisons apply the same diameter cutoff to the observed and modeled
 stands.
+
+## Hourly process window
+
+An A restart at the start of the dry-season window supplies both outer-step experiments. The
+two runs use the same forcing and initial state, with outer steps of 300 and 150 s and common
+one-hour output intervals. The window covers 20–30 April 2016 UTC. Soil potential and temperature
+are interpolated to 0.15 m using each site's own layer centers; polygon GPP and ET are hourly
+means. `analyze_hourly.py` checks the restart-file hashes and interval alignment before comparing
+the runs. The hourly window resolves transient responses; the full historical trajectories and
+multiyear contrasts remain the main results.
