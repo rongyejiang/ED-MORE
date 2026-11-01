@@ -1,0 +1,22 @@
+# SPDX-License-Identifier: Apache-2.0
+# Patch diagnostics for site aggregation; cohorts are saved by run_example.py.
+[variables]
+"*_co" = false
+"*_pa" = false
+"mean_gpp_pa" = "D M"
+"mean_npp_pa" = "D M"
+"mean_et_pa" = "D M"
+"mean_lai_pa" = "D M"
+"mean_agb_pa" = "D M"
+"mean_transp_pa" = "D M"
+"mean_resid_energy_pa" = "D M"
+"mean_resid_water_pa" = "D M"
+"area_pa" = "D M"
+"mean_area_pa" = "D M"
+"mean_leaf_flush_tendency_co" = "M"
+"mean_leaf_shed_tendency_co" = "M"
+"mean_dmax_psi_leaf_co" = "M"
+"mean_leaf_carbon_co" = "M"
+"mean_leaf_area_co" = "M"
+"mean_nplant_co" = "M"
+"pft_co" = "M"

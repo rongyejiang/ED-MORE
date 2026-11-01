@@ -71,6 +71,9 @@ This file covers every 0.x release; version 1.0 starts `CHANGELOG-v1.md`. The fo
 - Per-patch ET sources and budget residuals, off by default: `mean_transp_pa`,
   `mean_veg_surface_evap_pa`, `mean_ground_evap_pa`, `mean_dew_pa`, `mean_resid_energy_pa` and
   `mean_resid_water_pa`. (#60)
+- A BCI landscape example compares heterogeneous sites with an area-equivalent environment,
+  reconstructs site stands from patch and cohort output, and evaluates soil-depth sensitivity.
+
 
 ### Changed
 

@@ -1,0 +1,44 @@
+[
+  {
+    "file": "BCIelev.tsv",
+    "url": "https://datadryad.org/downloads/file_stream/148941",
+    "sha256": "0869ea08d2488b1e5c67d6e78201c6d0e938123be74ae190210d411aefd683b4",
+    "automatic_download": true
+  },
+  {
+    "file": "bci.tree.zip",
+    "url": "https://datadryad.org/downloads/file_stream/148942",
+    "sha256": "07c0fce4528c18d11916c2dd2e8e9f069f08bf62dfee38a67b18bda5c3b987ec",
+    "automatic_download": true
+  },
+  {
+    "file": "bci.spptable.rdata",
+    "url": "https://datadryad.org/downloads/file_stream/148944",
+    "sha256": "254f42986af6e1e28306f25e39910b9920448d28982bbda7124643d998a43955",
+    "automatic_download": true
+  },
+  {
+    "file": "BCI_retention_curves.txt",
+    "url": "https://datadryad.org/downloads/file_stream/49199",
+    "sha256": "f5e3dfd3f0175a29c18638ec594aea20b78103a9dc871987d20c69b5274d1419",
+    "automatic_download": true
+  },
+  {
+    "file": "BCI_SWP_SWC.txt",
+    "url": "https://datadryad.org/downloads/file_stream/49197",
+    "sha256": "6836f67c39aae822235eb17836bc33187c4f5e39e6bedc5b9e0461debe004791",
+    "automatic_download": true
+  },
+  {
+    "file": "Kupers_et_al.zip",
+    "url": "https://doi.org/10.6084/m9.figshare.7611005.v1",
+    "sha256": "67c3d80f12d88d6bbf2209ab46ebc8b3a0c4c3fa827ef010755a382afc15aabe",
+    "automatic_download": false
+  },
+  {
+    "file": "bci_habitat_observed.tsv",
+    "url": "https://raw.githubusercontent.com/forestgeo/bciex/9083e3b5f7c913db45df12f265b93528f0d1a679/data-raw/from_suzanne_lao/bcifiles/habitat.txt",
+    "sha256": "884fa1c2008fca9c8afa83171e908bf370dc0f73fc3f6245ddd83d5a7ee72ab8",
+    "automatic_download": true
+  }
+]
