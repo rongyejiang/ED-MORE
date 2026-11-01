@@ -550,7 +550,7 @@ def report(update_readme=False):
         100 * np.sqrt(weights @ (summary[key] - avg(key)) ** 2) / avg(key)
     )
     lines = [
-        "# BCI landscape results",
+        "# Site heterogeneity in the BCI forest plot",
         "",
         paragraph,
         "",

@@ -1,4 +1,4 @@
-# Example 07 — Environmental heterogeneity in the BCI forest plot
+# Example 07 — Site heterogeneity within a polygon
 
 The Barro Colorado Island forest plot is represented by sites with different terrain, soil
 profiles and initial vegetation. Three simulations separate the response to environmental
@@ -74,11 +74,11 @@ checksums and downloads the pinned habitat table if it is absent. If a data serv
 browser download, save the named file in the same directory and rerun the command.
 
 ```sh
-python examples/example07_bci_landscape/fetch_data.py \
+python examples/example07_site_heterogeneity/fetch_data.py \
   --copy-from "$BCI_DOWNLOADS" --era5-archive "$ERA5LAND_ARCHIVE"
-python examples/example07_bci_landscape/prepare_input.py
-python examples/example07_bci_landscape/prepare_validation.py
-python examples/example07_bci_landscape/verify_design.py
+python examples/example07_site_heterogeneity/prepare_input.py
+python examples/example07_site_heterogeneity/prepare_validation.py
+python examples/example07_site_heterogeneity/verify_design.py
 ```
 
 `BCI_DOWNLOADS` is the directory holding those public downloads. `ERA5LAND_ARCHIVE` is the
@@ -89,11 +89,11 @@ describes downloading ERA5-Land from CDS when a processed archive is unavailable
 
 ```sh
 for scenario in A_heterogeneous B_uniform_multisite C_uniform_single S_equal_depth; do
-  python examples/example07_bci_landscape/run_example.py --scenario "$scenario"
+  python examples/example07_site_heterogeneity/run_example.py --scenario "$scenario"
 done
-python examples/example07_bci_landscape/analyze_results.py --available
-python examples/example07_bci_landscape/analyze_stands.py
-python examples/example07_bci_landscape/plot_results.py
+python examples/example07_site_heterogeneity/analyze_results.py --available
+python examples/example07_site_heterogeneity/analyze_stands.py
+python examples/example07_site_heterogeneity/plot_results.py
 ```
 
 The run script also accepts `S_wetland_aquifer`, `S_no_cue` and `S_single_patch_budget`.
@@ -108,7 +108,7 @@ tables under `configs/`; the soil-map runtime mode is not used.
 Data, generated site configurations, model output, result tables and full-size figures are
 excluded from version control. The compact README previews are tracked. To refresh this
 README's result paragraph after a full run, use
-`python examples/example07_bci_landscape/plot_results.py --update-readme`.
+`python examples/example07_site_heterogeneity/plot_results.py --update-readme`.
 
 ## What to inspect
 

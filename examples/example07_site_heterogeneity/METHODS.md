@@ -1,4 +1,4 @@
-# Methods — BCI landscape representation
+# Methods — Site heterogeneity in the BCI forest plot
 
 ## Experimental design
 
