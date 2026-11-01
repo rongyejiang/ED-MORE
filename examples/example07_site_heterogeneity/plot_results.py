@@ -980,10 +980,10 @@ def report(update_readme=False):
     if depth is not None:
         eq = json.loads((HERE / "data/equivalent_environment.json").read_text())
         paragraph += (
-            f" Assigning every A site the area-mean depth ({eq['depth']:.3f} m) changes "
+            f"\n\n**Assigning every A site the area-mean depth ({eq['depth']:.3f} m) changes "
             f"its differences from B to {100 * (depth.gpp_kgC_m2_yr / b.gpp_kgC_m2_yr - 1):+.3f}% "
             f"and {100 * (depth.et_mm_yr / b.et_mm_yr - 1):+.3f}%, respectively. "
-            "Thus the simulated flux contrast depends strongly on the prescribed depth allocation."
+            "Thus the simulated flux contrast depends strongly on the prescribed depth allocation.**"
         )
     summary = pd.read_csv(HERE / "results/site_overview_values.csv")
     weights = summary.area_ha / summary.area_ha.sum()

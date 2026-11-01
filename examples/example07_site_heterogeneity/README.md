@@ -6,9 +6,9 @@ heterogeneity from the effects of grouping forest patches into sites. All retain
 BCI plant parameters from Examples 02–05. Each site groups quadrats with similar habitat and soil;
 the groups cover the complete plot and can include disconnected patches.
 
-The main comparisons follow the complete historical trajectories. Period means quantify their
-integrated differences, and common-date snapshots describe stand structure at a specified time.
-[Methods](METHODS.md) explains the spatial design, soil equivalence and active processes;
+The example follows site aboveground biomass (AGB), leaf area index (LAI) and plant functional
+type (PFT) composition through time, then compares the aggregated polygon with an equivalent
+single site. [Methods](METHODS.md) explains the spatial design, soil equivalence and active processes;
 [Data sources and access](#data-sources-and-access) lists the original datasets and acquisition steps.
 
 ## Experiment
@@ -27,85 +27,103 @@ area-weighted water storage as a function of potential.
 The depth sensitivity assigns every A site the same area-mean depth while retaining its terrain,
 retention curve and initial vegetation. The source-soil depths are prescribed scenarios;
 they are not inferred from the elevation grid or measured separately for each site. Additional
-runs change the swamp bottom boundary, phenology cues, or the single site's patch budget. [Methods](METHODS.md) specifies the site
-selection, equivalence calculation, parameter sources and interpretation of these contrasts.
+runs change the swamp bottom boundary, phenology cues or the single site's patch budget.
 
-## Continuous site and polygon comparisons
+Site AGB, LAI and composition are reconstructed from cohort states and their owning patch areas.
+The continuous comparisons include the adjustment year; period means exclude it. All modeled
+cohorts enter these results, while census diagnostics apply the observed diameter cutoff.
+The reconstruction, weighting and analysis periods are specified in
+[Methods](METHODS.md#stand-aggregation-and-diagnostics).
+
+## Results
+
+### Continuous site and polygon comparisons
+
+The sites begin with different observed forests, and their AGB and LAI trajectories remain
+distinct in both A and B. The within-site A − B comparison resolves the environmental response:
+the Marron and Fairchild groups develop stronger dry-season reductions in LAI under A, while
+their biomass differences persist between those episodes.
 
 ![Monthly site AGB and LAI in A and B and their paired differences](stand_trajectories.png)
 
-Monthly aboveground biomass (AGB) and leaf area index (LAI) are reconstructed from cohort states
-and their owning patch areas, including all modeled cohorts. A and B start from identical site
-forests. Their absolute trajectories use matching scales; the lower panels resolve their paired
-differences through time. Site colors are consistent throughout the example. The adjustment
-year is displayed and excluded from period-mean statistics. The paired source table is
-`results/AB_site_stand_monthly.csv`.
+*Figure 1. Monthly site AGB (left) and LAI (right): A in the top row, B in the middle row and
+A − B below. Absolute panels share scales; colors identify the same sites throughout.*
+
+At polygon scale, reductions in gross primary productivity (GPP) and evapotranspiration (ET)
+recur seasonally. B and C remain close in these fluxes, while their stand trajectories also
+reflect differences in patch grouping. The continuous contrasts show when these differences
+emerge and how long they persist.
 
 ![Continuous polygon GPP, ET, AGB and LAI with A–B, B–C and A–C differences](polygon_trajectories.png)
 
-Monthly means of daily polygon GPP, evapotranspiration (ET), AGB and LAI, together with their
-absolute differences. GPP and ET are mean daily rates within each month. The contrasts follow
-seasonal responses and longer-term changes over the full run; the source table is
-`results/polygon_monthly.csv`.
+*Figure 2. Monthly means of daily polygon GPP, evapotranspiration (ET), AGB and LAI in A, B and C
+(left), with absolute paired differences (right). GPP and ET are mean daily rates within each
+month, not monthly totals.*
 
-## Environmental responses and period means
+### Environmental responses and period means
 
-![Site water-potential trajectories in A and B and absolute GPP and ET responses](environment_responses.png)
-
-Water potential at 0.15 m is shown on the same scale for A and B, using trailing seven-day means
-over the illustrated dry seasons. The lower panels quantify the absolute mean daily GPP and ET
-differences over the complete analysis period. The full-period stand and polygon trajectories
-above place this seasonal window in context.
+The Marron and Fairchild groups reach more negative dry-season soil water potentials in A and
+show the largest mean GPP and ET reductions relative to B. Their response contributes to the
+polygon flux differences below.
 
 <!-- results:start -->
 
-For 2012–2017, A has 1.281% lower GPP and 1.095% lower evapotranspiration than B. The B − C differences are +0.047% for GPP and -0.003% for evapotranspiration. Across the full A − C comparison, the differences are -1.235% and -1.098%. Assigning every A site the area-mean depth (1.695 m) changes its differences from B to -0.020% and -0.019%, respectively. Thus the simulated flux contrast depends strongly on the prescribed depth allocation.
+For 2012–2017, A has 1.281% lower GPP and 1.095% lower evapotranspiration than B. The B − C differences are +0.047% for GPP and -0.003% for evapotranspiration. Across the full A − C comparison, the differences are -1.235% and -1.098%.
+
+**Assigning every A site the area-mean depth (1.695 m) changes its differences from B to -0.020% and -0.019%, respectively. Thus the simulated flux contrast depends strongly on the prescribed depth allocation.**
 
 <!-- results:end -->
 
+![Site water-potential trajectories in A and B and absolute GPP and ET responses](environment_responses.png)
+
+*Figure 3. Water potential at 0.15 m in A and B, shown as trailing seven-day means on a common
+scale (top). Absolute mean daily GPP and ET differences over 2012–2017 appear below.*
+
 ![Paired site differences in GPP, evapotranspiration, biomass and leaf area](site_responses.png)
 
-A relative to B, calculated as 100 × (mean A / mean B − 1) from daily values over 2012–2017.
-Colors identify the same sites as the map. Each pair starts from the same observed forest;
-the contrast measures the response to the assigned terrain and soil profile, including the
-subsequent forest dynamics. AGB and LAI include all modeled cohorts. Absolute values and each
-site's contribution to the polygon difference are exported in `results/AB_site_summary.csv`.
+*Figure 4. Site GPP, ET, AGB and LAI responses, calculated as 100 × (mean A / mean B − 1) from
+daily values over 2012–2017.*
 
-## Stand structure at common dates
+### Stand structure at common dates
+
+The common-date comparisons quantify stand structure along the trajectories in Figure 1.
+Cross-site differences include the observed initial composition; the paired PFT comparison
+shows how the environments subsequently change the biomass shares within each site.
 
 ![Site distribution and common-date biomass, leaf area and composition](overview.png)
 
-The lower panels quantify site AGB, LAI and plant functional type (PFT) biomass shares on
-1 July 2015. Dashed lines mark the polygon area-weighted means. The upper panels place that
-snapshot within the mapped sites and their monthly trajectories. All modeled cohorts are
-included. These values describe the stand at the selected date; the continuous comparisons
-above show how it developed.
+*Figure 5. Site map and monthly trajectories (top); AGB, LAI and PFT biomass shares on
+1 July 2015 (bottom). Dashed lines in the lower AGB and LAI panels mark polygon area-weighted means.*
 
 ![Paired differences in PFT biomass shares](site_composition.png)
 
-A minus B in each PFT's share of site AGB, in percentage points. The colors retain the low-,
-mid- and high-wood-density classes of the overview; their three differences sum to zero at
-each site. The two panels compare July 2015 with the final saved month. The monthly source
-table is `results/AB_site_pft_monthly.csv.gz`. These comparisons separate environmental
-responses from the initial differences among site forests.
+*Figure 6. A − B in each PFT's share of site AGB, in percentage points, for July 2015 and the
+final saved month. Colors denote low-, mid- and high-wood-density PFTs; their differences sum
+to zero within each site.*
 
-## Sensitivity and hourly processes
+### Sensitivity to the prescribed assumptions
+
+Among the scenarios examined, equalizing depth gives the largest change in polygon GPP and ET.
+The phenology-cue and patch-budget changes also affect stand structure, so sensitivity differs
+among fluxes, AGB and LAI. Each scenario changes a specified part of the setup; these responses
+are not additive contributions.
 
 ![Sensitivity of polygon GPP, ET, AGB and LAI](sensitivity.png)
 
-Changes in the 2012–2017 means relative to the reference named in each row. The aquifer,
-phenology-cue and equal-depth scenarios use A as reference; the larger single-site patch budget
-uses C. These contrasts examine distinct assumptions and are not additive contributions.
-The numerical values are in `results/sensitivity_summary.csv`.
+*Figure 7. Changes in the 2012–2017 means relative to the reference named in each row: A for
+the aquifer, phenology-cue and equal-depth scenarios; C for the larger single-site patch budget.*
+
+### Hourly processes
+
+The short window resolves soil rewetting and temperature changes alongside the diurnal flux
+cycles. Site water potentials recover at different rates after rainfall. The two outer-step
+runs give closely overlapping polygon GPP and ET curves from the common restart state.
 
 ![Hourly forcing, polygon fluxes and site soil responses](hourly_processes.png)
 
-Hourly processes during 20–30 April 2016 UTC. The two A runs begin from the same restart state
-and use 300 and 150 s outer steps with identical hourly reporting intervals. GPP and ET are
-polygon means. Soil potential and temperature are site means interpolated to 0.15 m, shown for
-the 300 s run. This window resolves transient responses alongside the continuous historical
-comparison. Its source table and provenance are `results/hourly_window.csv` and
-`results/hourly_provenance.json`.
+*Figure 8. Hourly forcing, polygon GPP and ET, and site soil responses during 20–30 April 2016
+UTC. Flux curves compare 300 and 150 s outer steps; water potential and temperature at 0.15 m
+are shown for the 300 s run.*
 
 ## Data sources and access
 
@@ -197,7 +215,7 @@ PNG, PDF and editable SVG; complete captions and numerical summaries are generat
 README's result paragraph after a full run, use
 `python examples/example07_site_heterogeneity/plot_results.py --update-readme`.
 
-## What to inspect
+## Output files
 
 | Output | Question |
 |---|---|
@@ -212,6 +230,10 @@ README's result paragraph after a full run, use
 | `figures/11_stand_trajectories.*`, `15_polygon_trajectories.*` | How do site stands and polygon responses develop over the full run? |
 | `figures/12_environment_responses.*` | How do the paired water-potential trajectories relate to the absolute flux differences? |
 | `figures/13_sensitivity.*`, `14_hourly_processes.*` | How do prescribed assumptions and hourly processes affect the results? |
+| `results/AB_site_stand_monthly.csv`, `polygon_monthly.csv` | Monthly values behind the continuous stand and polygon comparisons |
+| `results/AB_site_summary.csv`, `AB_site_pft_monthly.csv.gz` | Site period means, polygon contributions and monthly paired PFT composition |
+| `results/sensitivity_summary.csv` | Scenario contrasts and their reference runs |
+| `results/hourly_window.csv`, `hourly_provenance.json` | Hourly values, input-file hashes and common-restart checks |
 | `results/A_site_stand_closure.csv`, `B_site_stand_closure.csv` | Do patch/cohort reconstructions recover the polygon stand totals? |
 | `results/census_2015_comparison.csv`, `A_site_pft_census_2015.csv` | How do tree density, basal area and biomass compare with the census? |
 | `results/field_swp_metrics_by_site.csv` | How do modeled potentials compare with field samples? |
